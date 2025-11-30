@@ -1,0 +1,657 @@
+2025-09-05 19:53:29,187 - MMSA [INFO] - ======================================== Program Start ========================================
+2025-09-05 19:53:29,386 - MMSA [INFO] - Running with args:
+2025-09-05 19:53:29,387 - MMSA [INFO] - {'model_name': 'tetfn_crt', 'dataset_name': 'mosi', 'featurePath': 'data/MOSI/Processed/aligned_50.pkl', 'seq_lens': [50, 50, 50], 'feature_dims': [768, 5, 20], 'train_samples': 1284, 'num_classes': 3, 'language': 'en', 'KeyEval': 'Loss', 'missing_rate': [0.2, 0.2, 0.2], 'missing_seed': [1111, 1111, 1111], 'need_data_aligned': True, 'need_model_aligned': True, 'need_normalized': False, 'use_bert': True, 'use_finetune': True, 'save_labels': False, 'early_stop': 8, 'update_epochs': 4, 'batch_size': 64, 'transformers': 'bert', 'pretrained': 'bert-base-uncased', 'a_lstm_hidden_size': 16, 'a_lstm_layers': 1, 'a_lstm_dropout': 0.0, 'v_lstm_hidden_size': 64, 'v_lstm_layers': 1, 'v_lstm_dropout': 0.0, 'conv1d_kernel_size_l': 1, 'conv1d_kernel_size_a': 1, 'conv1d_kernel_size_v': 3, 'dst_feature_dims': 50, 'nheads': 5, 'attn_dropout': 0.1, 'attn_dropout_a': 0.0, 'attn_dropout_v': 0.1, 'relu_dropout': 0.0, 'embed_dropout': 0.0, 'res_dropout': 0.1, 'post_fusion_dropout': 0.0, 'post_fusion_dim': 64, 'post_text_dropout': 0.0, 'post_text_dim': 32, 'post_audio_dropout': 0.0, 'post_audio_dim': 32, 'post_video_dropout': 0.0, 'post_video_dim': 16, 'excludeZero': True, 'H': 3, 'decay': False, 'weight_decay_bert': 0.001, 'learning_rate_bert': 3e-05, 'weight_decay_audio': 0.01, 'use_info_bottleneck': True, 'use_text_debias': True, 'bottleneck_dim': 25, 'info_bottleneck_beta': 0.001, 'info_bottleneck_dropout': 0.1, 'debias_model_dim': 128, 'debias_num_heads': 8, 'debias_num_layers': 2, 'debias_dropout': 0.1, 'debias_confounder_size': 50, 'use_kmeans_init': False, 'info_bottleneck_weight': 0.1, 'weight_decay_video': 0.0, 'weight_decay_other': 0.01, 'learning_rate_audio': 0.0005, 'learning_rate_video': 0.0003, 'learning_rate_other': 0.0003, 'model_save_path': PosixPath('save_models/tetfn_crt-mosi.pth'), 'device': device(type='cuda', index=0), 'train_mode': 'regression', 'custom_feature': None, 'feature_T': None, 'feature_A': None, 'feature_V': None}
+2025-09-05 19:53:29,388 - MMSA [INFO] - Seeds: [1111]
+2025-09-05 19:53:29,393 - MMSA [INFO] - ------------------------------ Running with seed 1111 [1/1] ------------------------------
+2025-09-05 19:53:30,837 - MMSA [INFO] - train samples: (1284,)
+2025-09-05 19:53:32,145 - MMSA [INFO] - valid samples: (229,)
+2025-09-05 19:53:32,879 - MMSA [INFO] - test samples: (686,)
+2025-09-05 20:02:30,091 - MMSA [INFO] - ======================================== Program Start ========================================
+2025-09-05 20:02:23,706 - MMSA [INFO] - Running with args:
+2025-09-05 20:02:23,706 - MMSA [INFO] - {'model_name': 'tetfn_crt', 'dataset_name': 'mosi', 'featurePath': 'data/MOSI/Processed/aligned_50.pkl', 'seq_lens': [50, 50, 50], 'feature_dims': [768, 5, 20], 'train_samples': 1284, 'num_classes': 3, 'language': 'en', 'KeyEval': 'Loss', 'missing_rate': [0.2, 0.2, 0.2], 'missing_seed': [1111, 1111, 1111], 'need_data_aligned': True, 'need_model_aligned': True, 'need_normalized': False, 'use_bert': True, 'use_finetune': True, 'save_labels': False, 'early_stop': 8, 'update_epochs': 4, 'batch_size': 64, 'transformers': 'bert', 'pretrained': 'bert-base-uncased', 'a_lstm_hidden_size': 16, 'a_lstm_layers': 1, 'a_lstm_dropout': 0.0, 'v_lstm_hidden_size': 64, 'v_lstm_layers': 1, 'v_lstm_dropout': 0.0, 'conv1d_kernel_size_l': 1, 'conv1d_kernel_size_a': 1, 'conv1d_kernel_size_v': 3, 'dst_feature_dims': 50, 'nheads': 5, 'attn_dropout': 0.1, 'attn_dropout_a': 0.0, 'attn_dropout_v': 0.1, 'relu_dropout': 0.0, 'embed_dropout': 0.0, 'res_dropout': 0.1, 'post_fusion_dropout': 0.0, 'post_fusion_dim': 64, 'post_text_dropout': 0.0, 'post_text_dim': 32, 'post_audio_dropout': 0.0, 'post_audio_dim': 32, 'post_video_dropout': 0.0, 'post_video_dim': 16, 'excludeZero': True, 'H': 3, 'decay': False, 'weight_decay_bert': 0.001, 'learning_rate_bert': 3e-05, 'weight_decay_audio': 0.01, 'use_info_bottleneck': True, 'use_text_debias': True, 'bottleneck_dim': 25, 'info_bottleneck_beta': 0.001, 'info_bottleneck_dropout': 0.1, 'debias_model_dim': 128, 'debias_num_heads': 8, 'debias_num_layers': 2, 'debias_dropout': 0.1, 'debias_confounder_size': 50, 'use_kmeans_init': False, 'info_bottleneck_weight': 0.1, 'weight_decay_video': 0.0, 'weight_decay_other': 0.01, 'learning_rate_audio': 0.0005, 'learning_rate_video': 0.0003, 'learning_rate_other': 0.0003, 'model_save_path': PosixPath('save_models/tetfn_crt-mosi.pth'), 'device': device(type='cuda', index=0), 'train_mode': 'regression', 'custom_feature': None, 'feature_T': None, 'feature_A': None, 'feature_V': None}
+2025-09-05 20:02:23,706 - MMSA [INFO] - Seeds: [1111]
+2025-09-05 20:02:23,714 - MMSA [INFO] - ------------------------------ Running with seed 1111 [1/1] ------------------------------
+2025-09-05 20:02:25,544 - MMSA [INFO] - train samples: (1284,)
+2025-09-05 20:02:27,874 - MMSA [INFO] - valid samples: (229,)
+2025-09-05 20:02:29,290 - MMSA [INFO] - test samples: (686,)
+2025-09-05 20:02:33,625 - MMSA [INFO] - The model has 110905064 trainable parameters
+2025-09-05 20:02:33,631 - MMSA [INFO] - Init labels
+2025-09-05 20:02:39,815 - MMSA [INFO] - Start training
+2025-09-05 20:02:47,505 - MMSA [INFO] - M: >>  Has0_acc_2: 0.5506  Has0_F1_score: 0.5007  Non0_acc_2: 0.5410  Non0_F1_score: 0.4890  Mult_acc_5: 0.1931  Mult_acc_7: 0.1931  MAE: 1.3106  Corr: 0.1133 
+2025-09-05 20:02:47,511 - MMSA [INFO] - T: >>  Has0_acc_2: 0.5241  Has0_F1_score: 0.4455  Non0_acc_2: 0.5102  Non0_F1_score: 0.4289  Mult_acc_5: 0.1931  Mult_acc_7: 0.1931  MAE: 1.3296  Corr: -0.1067 
+2025-09-05 20:02:47,518 - MMSA [INFO] - A: >>  Has0_acc_2: 0.5701  Has0_F1_score: 0.4140  Non0_acc_2: 0.5516  Non0_F1_score: 0.3922  Mult_acc_5: 0.1931  Mult_acc_7: 0.1931  MAE: 1.3217  Corr: 0.0259 
+2025-09-05 20:02:47,524 - MMSA [INFO] - V: >>  Has0_acc_2: 0.4299  Has0_F1_score: 0.2585  Non0_acc_2: 0.4484  Non0_F1_score: 0.2777  Mult_acc_5: 0.1931  Mult_acc_7: 0.1931  MAE: 1.3415  Corr: 0.0436 
+2025-09-05 20:02:48,206 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 1.4028 
+2025-09-05 20:02:48,210 - MMSA [INFO] - M: >>  Has0_acc_2: 0.5983  Has0_F1_score: 0.4479  Non0_acc_2: 0.5741  Non0_F1_score: 0.4187  Mult_acc_5: 0.2402  Mult_acc_7: 0.2402  MAE: 1.3813  Corr: 0.3629 
+2025-09-05 20:02:50,043 - MMSA [INFO] - M: >>  Has0_acc_2: 0.6176  Has0_F1_score: 0.5297  Non0_acc_2: 0.6060  Non0_F1_score: 0.5156  Mult_acc_5: 0.2227  Mult_acc_7: 0.2227  MAE: 1.2266  Corr: 0.5013 
+2025-09-05 20:02:50,049 - MMSA [INFO] - T: >>  Has0_acc_2: 0.4883  Has0_F1_score: 0.4505  Non0_acc_2: 0.4736  Non0_F1_score: 0.4348  Mult_acc_5: 0.1931  Mult_acc_7: 0.1931  MAE: 1.3307  Corr: -0.1860 
+2025-09-05 20:02:50,055 - MMSA [INFO] - A: >>  Has0_acc_2: 0.5701  Has0_F1_score: 0.4140  Non0_acc_2: 0.5516  Non0_F1_score: 0.3922  Mult_acc_5: 0.1931  Mult_acc_7: 0.1931  MAE: 1.3219  Corr: 0.0651 
+2025-09-05 20:02:50,061 - MMSA [INFO] - V: >>  Has0_acc_2: 0.4299  Has0_F1_score: 0.2585  Non0_acc_2: 0.4484  Non0_F1_score: 0.2777  Mult_acc_5: 0.1931  Mult_acc_7: 0.1931  MAE: 1.3414  Corr: -0.0037 
+2025-09-05 20:02:50,630 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 1.2335 
+2025-09-05 20:02:50,634 - MMSA [INFO] - M: >>  Has0_acc_2: 0.6812  Has0_F1_score: 0.6667  Non0_acc_2: 0.6759  Non0_F1_score: 0.6603  Mult_acc_5: 0.2489  Mult_acc_7: 0.2489  MAE: 1.2350  Corr: 0.5719 
+2025-09-05 20:02:59,392 - MMSA [INFO] - M: >>  Has0_acc_2: 0.7632  Has0_F1_score: 0.7608  Non0_acc_2: 0.7725  Non0_F1_score: 0.7695  Mult_acc_5: 0.2445  Mult_acc_7: 0.2445  MAE: 1.0244  Corr: 0.6719 
+2025-09-05 20:02:59,396 - MMSA [INFO] - T: >>  Has0_acc_2: 0.4813  Has0_F1_score: 0.4120  Non0_acc_2: 0.4813  Non0_F1_score: 0.4120  Mult_acc_5: 0.2625  Mult_acc_7: 0.2625  MAE: 1.0235  Corr: -0.1206 
+2025-09-05 20:02:59,401 - MMSA [INFO] - A: >>  Has0_acc_2: 0.5600  Has0_F1_score: 0.4020  Non0_acc_2: 0.5600  Non0_F1_score: 0.4020  Mult_acc_5: 0.3310  Mult_acc_7: 0.3310  MAE: 0.9979  Corr: -0.0355 
+2025-09-05 20:02:59,407 - MMSA [INFO] - V: >>  Has0_acc_2: 0.4502  Has0_F1_score: 0.2795  Non0_acc_2: 0.4502  Non0_F1_score: 0.2795  Mult_acc_5: 0.3100  Mult_acc_7: 0.3100  MAE: 0.9169  Corr: 0.0125 
+2025-09-05 20:02:59,999 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 1.0339 
+2025-09-05 20:03:00,003 - MMSA [INFO] - M: >>  Has0_acc_2: 0.7773  Has0_F1_score: 0.7786  Non0_acc_2: 0.8102  Non0_F1_score: 0.8107  Mult_acc_5: 0.2795  Mult_acc_7: 0.2795  MAE: 1.0423  Corr: 0.6627 
+2025-09-05 20:03:14,810 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8146  Has0_F1_score: 0.8155  Non0_acc_2: 0.8367  Non0_F1_score: 0.8371  Mult_acc_5: 0.3956  Mult_acc_7: 0.3731  MAE: 0.8314  Corr: 0.7195 
+2025-09-05 20:03:14,815 - MMSA [INFO] - T: >>  Has0_acc_2: 0.5561  Has0_F1_score: 0.4048  Non0_acc_2: 0.5561  Non0_F1_score: 0.4048  Mult_acc_5: 0.2983  Mult_acc_7: 0.2983  MAE: 0.8887  Corr: 0.4949 
+2025-09-05 20:03:14,821 - MMSA [INFO] - A: >>  Has0_acc_2: 0.5701  Has0_F1_score: 0.4140  Non0_acc_2: 0.5701  Non0_F1_score: 0.4140  Mult_acc_5: 0.4104  Mult_acc_7: 0.4104  MAE: 0.7705  Corr: 0.0034 
+2025-09-05 20:03:14,826 - MMSA [INFO] - V: >>  Has0_acc_2: 0.4572  Has0_F1_score: 0.2869  Non0_acc_2: 0.4572  Non0_F1_score: 0.2869  Mult_acc_5: 0.3871  Mult_acc_7: 0.3871  MAE: 0.7314  Corr: 0.0494 
+2025-09-05 20:03:08,903 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.9497 
+2025-09-05 20:03:08,907 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8166  Has0_F1_score: 0.8172  Non0_acc_2: 0.8426  Non0_F1_score: 0.8421  Mult_acc_5: 0.4061  Mult_acc_7: 0.3231  MAE: 0.9459  Corr: 0.7074 
+2025-09-05 20:03:18,319 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8185  Has0_F1_score: 0.8192  Non0_acc_2: 0.8440  Non0_F1_score: 0.8443  Mult_acc_5: 0.4221  Mult_acc_7: 0.3925  MAE: 0.7644  Corr: 0.7556 
+2025-09-05 20:03:18,325 - MMSA [INFO] - T: >>  Has0_acc_2: 0.5366  Has0_F1_score: 0.3756  Non0_acc_2: 0.5366  Non0_F1_score: 0.3756  Mult_acc_5: 0.3185  Mult_acc_7: 0.3185  MAE: 0.8087  Corr: 0.6912 
+2025-09-05 20:03:18,330 - MMSA [INFO] - A: >>  Has0_acc_2: 0.5607  Has0_F1_score: 0.4029  Non0_acc_2: 0.5607  Non0_F1_score: 0.4029  Mult_acc_5: 0.4665  Mult_acc_7: 0.4665  MAE: 0.6312  Corr: 0.0108 
+2025-09-05 20:03:18,336 - MMSA [INFO] - V: >>  Has0_acc_2: 0.4681  Has0_F1_score: 0.2985  Non0_acc_2: 0.4681  Non0_F1_score: 0.2985  Mult_acc_5: 0.4595  Mult_acc_7: 0.4595  MAE: 0.6035  Corr: 0.0404 
+2025-09-05 20:03:24,866 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.8547 
+2025-09-05 20:03:24,870 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8122  Has0_F1_score: 0.8140  Non0_acc_2: 0.8519  Non0_F1_score: 0.8527  Mult_acc_5: 0.4192  Mult_acc_7: 0.3406  MAE: 0.8662  Corr: 0.7355 
+2025-09-05 20:03:28,128 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8769  Has0_F1_score: 0.8774  Non0_acc_2: 0.8976  Non0_F1_score: 0.8978  Mult_acc_5: 0.4766  Mult_acc_7: 0.4447  MAE: 0.6530  Corr: 0.8263 
+2025-09-05 20:03:28,133 - MMSA [INFO] - T: >>  Has0_acc_2: 0.5187  Has0_F1_score: 0.3543  Non0_acc_2: 0.5187  Non0_F1_score: 0.3543  Mult_acc_5: 0.3442  Mult_acc_7: 0.3442  MAE: 0.7302  Corr: 0.6653 
+2025-09-05 20:03:28,138 - MMSA [INFO] - A: >>  Has0_acc_2: 0.5257  Has0_F1_score: 0.3623  Non0_acc_2: 0.5257  Non0_F1_score: 0.3623  Mult_acc_5: 0.5561  Mult_acc_7: 0.5561  MAE: 0.5274  Corr: 0.1248 
+2025-09-05 20:03:28,143 - MMSA [INFO] - V: >>  Has0_acc_2: 0.5101  Has0_F1_score: 0.3446  Non0_acc_2: 0.5101  Non0_F1_score: 0.3446  Mult_acc_5: 0.5794  Mult_acc_7: 0.5794  MAE: 0.4922  Corr: 0.0677 
+2025-09-05 20:03:34,865 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.8604 
+2025-09-05 20:03:34,870 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8210  Has0_F1_score: 0.8226  Non0_acc_2: 0.8611  Non0_F1_score: 0.8616  Mult_acc_5: 0.4367  Mult_acc_7: 0.3668  MAE: 0.8548  Corr: 0.7479 
+2025-09-05 20:03:34,837 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8824  Has0_F1_score: 0.8830  Non0_acc_2: 0.9066  Non0_F1_score: 0.9068  Mult_acc_5: 0.4875  Mult_acc_7: 0.4603  MAE: 0.6149  Corr: 0.8544 
+2025-09-05 20:03:34,842 - MMSA [INFO] - T: >>  Has0_acc_2: 0.4790  Has0_F1_score: 0.3146  Non0_acc_2: 0.4790  Non0_F1_score: 0.3146  Mult_acc_5: 0.4268  Mult_acc_7: 0.4268  MAE: 0.6601  Corr: 0.6805 
+2025-09-05 20:03:34,848 - MMSA [INFO] - A: >>  Has0_acc_2: 0.4252  Has0_F1_score: 0.2537  Non0_acc_2: 0.4252  Non0_F1_score: 0.2537  Mult_acc_5: 0.6238  Mult_acc_7: 0.6238  MAE: 0.4976  Corr: 0.1441 
+2025-09-05 20:03:34,853 - MMSA [INFO] - V: >>  Has0_acc_2: 0.6207  Has0_F1_score: 0.4755  Non0_acc_2: 0.6207  Non0_F1_score: 0.4755  Mult_acc_5: 0.6363  Mult_acc_7: 0.6363  MAE: 0.4297  Corr: 0.1311 
+2025-09-05 20:03:35,580 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.8303 
+2025-09-05 20:03:35,584 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8210  Has0_F1_score: 0.8217  Non0_acc_2: 0.8519  Non0_F1_score: 0.8514  Mult_acc_5: 0.4541  Mult_acc_7: 0.3755  MAE: 0.8138  Corr: 0.7599 
+2025-09-05 20:03:44,271 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8894  Has0_F1_score: 0.8900  Non0_acc_2: 0.9115  Non0_F1_score: 0.9117  Mult_acc_5: 0.5265  Mult_acc_7: 0.4922  MAE: 0.5471  Corr: 0.8783 
+2025-09-05 20:03:44,277 - MMSA [INFO] - T: >>  Has0_acc_2: 0.5506  Has0_F1_score: 0.5019  Non0_acc_2: 0.5506  Non0_F1_score: 0.5019  Mult_acc_5: 0.4634  Mult_acc_7: 0.4634  MAE: 0.6449  Corr: 0.6086 
+2025-09-05 20:03:44,284 - MMSA [INFO] - A: >>  Has0_acc_2: 0.3310  Has0_F1_score: 0.1646  Non0_acc_2: 0.3310  Non0_F1_score: 0.1646  Mult_acc_5: 0.6114  Mult_acc_7: 0.6114  MAE: 0.5199  Corr: 0.1037 
+2025-09-05 20:03:44,289 - MMSA [INFO] - V: >>  Has0_acc_2: 0.7227  Has0_F1_score: 0.6064  Non0_acc_2: 0.7227  Non0_F1_score: 0.6064  Mult_acc_5: 0.6114  Mult_acc_7: 0.6114  MAE: 0.4366  Corr: 0.1248 
+2025-09-05 20:03:44,902 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.8457 
+2025-09-05 20:03:44,906 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8079  Has0_F1_score: 0.8097  Non0_acc_2: 0.8426  Non0_F1_score: 0.8432  Mult_acc_5: 0.4279  Mult_acc_7: 0.3537  MAE: 0.8166  Corr: 0.7609 
+2025-09-05 20:03:50,889 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9159  Has0_F1_score: 0.9163  Non0_acc_2: 0.9350  Non0_F1_score: 0.9351  Mult_acc_5: 0.5779  Mult_acc_7: 0.5413  MAE: 0.4898  Corr: 0.9030 
+2025-09-05 20:03:50,895 - MMSA [INFO] - T: >>  Has0_acc_2: 0.6994  Has0_F1_score: 0.6988  Non0_acc_2: 0.6994  Non0_F1_score: 0.6988  Mult_acc_5: 0.4486  Mult_acc_7: 0.4486  MAE: 0.6330  Corr: 0.6258 
+2025-09-05 20:03:50,899 - MMSA [INFO] - A: >>  Has0_acc_2: 0.2991  Has0_F1_score: 0.1377  Non0_acc_2: 0.2991  Non0_F1_score: 0.1377  Mult_acc_5: 0.6012  Mult_acc_7: 0.6012  MAE: 0.5382  Corr: 0.0908 
+2025-09-05 20:03:50,905 - MMSA [INFO] - V: >>  Has0_acc_2: 0.7445  Has0_F1_score: 0.6355  Non0_acc_2: 0.7445  Non0_F1_score: 0.6355  Mult_acc_5: 0.5888  Mult_acc_7: 0.5888  MAE: 0.4576  Corr: 0.0747 
+2025-09-05 20:03:51,536 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.7902 
+2025-09-05 20:03:51,540 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8035  Has0_F1_score: 0.8053  Non0_acc_2: 0.8380  Non0_F1_score: 0.8386  Mult_acc_5: 0.4760  Mult_acc_7: 0.3712  MAE: 0.7955  Corr: 0.7744 
+2025-09-05 20:04:02,366 - MMSA [INFO] - ======================================== Program Start ========================================
+2025-09-05 20:04:02,548 - MMSA [INFO] - Running with args:
+2025-09-05 20:04:02,549 - MMSA [INFO] - {'model_name': 'tetfn_crt', 'dataset_name': 'mosi', 'featurePath': 'data/MOSI/Processed/aligned_50.pkl', 'seq_lens': [50, 50, 50], 'feature_dims': [768, 5, 20], 'train_samples': 1284, 'num_classes': 3, 'language': 'en', 'KeyEval': 'Loss', 'missing_rate': [0.2, 0.2, 0.2], 'missing_seed': [1111, 1111, 1111], 'need_data_aligned': True, 'need_model_aligned': True, 'need_normalized': False, 'use_bert': True, 'use_finetune': True, 'save_labels': False, 'early_stop': 8, 'update_epochs': 4, 'batch_size': 64, 'transformers': 'bert', 'pretrained': 'bert-base-uncased', 'a_lstm_hidden_size': 16, 'a_lstm_layers': 1, 'a_lstm_dropout': 0.0, 'v_lstm_hidden_size': 64, 'v_lstm_layers': 1, 'v_lstm_dropout': 0.0, 'conv1d_kernel_size_l': 1, 'conv1d_kernel_size_a': 1, 'conv1d_kernel_size_v': 3, 'dst_feature_dims': 50, 'nheads': 5, 'attn_dropout': 0.1, 'attn_dropout_a': 0.0, 'attn_dropout_v': 0.1, 'relu_dropout': 0.0, 'embed_dropout': 0.0, 'res_dropout': 0.1, 'post_fusion_dropout': 0.0, 'post_fusion_dim': 64, 'post_text_dropout': 0.0, 'post_text_dim': 32, 'post_audio_dropout': 0.0, 'post_audio_dim': 32, 'post_video_dropout': 0.0, 'post_video_dim': 16, 'excludeZero': True, 'H': 3, 'decay': False, 'weight_decay_bert': 0.001, 'learning_rate_bert': 3e-05, 'weight_decay_audio': 0.01, 'use_info_bottleneck': True, 'use_text_debias': True, 'bottleneck_dim': 25, 'info_bottleneck_beta': 0.001, 'info_bottleneck_dropout': 0.1, 'debias_model_dim': 128, 'debias_num_heads': 8, 'debias_num_layers': 2, 'debias_dropout': 0.1, 'debias_confounder_size': 50, 'use_kmeans_init': False, 'info_bottleneck_weight': 0.1, 'weight_decay_video': 0.0, 'weight_decay_other': 0.01, 'learning_rate_audio': 0.0005, 'learning_rate_video': 0.0003, 'learning_rate_other': 0.0003, 'model_save_path': PosixPath('save_models/tetfn_crt-mosi.pth'), 'device': device(type='cuda', index=0), 'train_mode': 'regression', 'custom_feature': None, 'feature_T': None, 'feature_A': None, 'feature_V': None}
+2025-09-05 20:04:02,550 - MMSA [INFO] - Seeds: [1111]
+2025-09-05 20:04:02,578 - MMSA [INFO] - ------------------------------ Running with seed 1111 [1/1] ------------------------------
+2025-09-05 20:04:09,879 - MMSA [INFO] - train samples: (1284,)
+2025-09-05 20:04:04,865 - MMSA [INFO] - valid samples: (229,)
+2025-09-05 20:04:06,541 - MMSA [INFO] - test samples: (686,)
+2025-09-05 20:04:10,992 - MMSA [INFO] - The model has 110905064 trainable parameters
+2025-09-05 20:04:11,008 - MMSA [INFO] - Init labels
+2025-09-05 20:04:11,158 - MMSA [INFO] - Start training
+2025-09-05 20:04:17,183 - MMSA [INFO] - M: >>  Has0_acc_2: 0.5506  Has0_F1_score: 0.5007  Non0_acc_2: 0.5410  Non0_F1_score: 0.4890  Mult_acc_5: 0.1931  Mult_acc_7: 0.1931  MAE: 1.3106  Corr: 0.1134 
+2025-09-05 20:04:17,186 - MMSA [INFO] - T: >>  Has0_acc_2: 0.5234  Has0_F1_score: 0.4450  Non0_acc_2: 0.5093  Non0_F1_score: 0.4284  Mult_acc_5: 0.1931  Mult_acc_7: 0.1931  MAE: 1.3296  Corr: -0.1067 
+2025-09-05 20:04:17,192 - MMSA [INFO] - A: >>  Has0_acc_2: 0.5701  Has0_F1_score: 0.4140  Non0_acc_2: 0.5516  Non0_F1_score: 0.3922  Mult_acc_5: 0.1931  Mult_acc_7: 0.1931  MAE: 1.3217  Corr: 0.0259 
+2025-09-05 20:04:17,196 - MMSA [INFO] - V: >>  Has0_acc_2: 0.4299  Has0_F1_score: 0.2585  Non0_acc_2: 0.4484  Non0_F1_score: 0.2777  Mult_acc_5: 0.1931  Mult_acc_7: 0.1931  MAE: 1.3415  Corr: 0.0435 
+2025-09-05 20:04:17,724 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 1.4028 
+2025-09-05 20:04:17,729 - MMSA [INFO] - M: >>  Has0_acc_2: 0.5983  Has0_F1_score: 0.4479  Non0_acc_2: 0.5741  Non0_F1_score: 0.4187  Mult_acc_5: 0.2358  Mult_acc_7: 0.2358  MAE: 1.3813  Corr: 0.3642 
+2025-09-05 20:04:25,081 - MMSA [INFO] - M: >>  Has0_acc_2: 0.6176  Has0_F1_score: 0.5297  Non0_acc_2: 0.6060  Non0_F1_score: 0.5156  Mult_acc_5: 0.2212  Mult_acc_7: 0.2212  MAE: 1.2264  Corr: 0.5023 
+2025-09-05 20:04:25,085 - MMSA [INFO] - T: >>  Has0_acc_2: 0.4914  Has0_F1_score: 0.4528  Non0_acc_2: 0.4760  Non0_F1_score: 0.4366  Mult_acc_5: 0.1931  Mult_acc_7: 0.1931  MAE: 1.3307  Corr: -0.1849 
+2025-09-05 20:04:25,088 - MMSA [INFO] - A: >>  Has0_acc_2: 0.5701  Has0_F1_score: 0.4140  Non0_acc_2: 0.5516  Non0_F1_score: 0.3922  Mult_acc_5: 0.1931  Mult_acc_7: 0.1931  MAE: 1.3219  Corr: 0.0651 
+2025-09-05 20:04:25,092 - MMSA [INFO] - V: >>  Has0_acc_2: 0.4299  Has0_F1_score: 0.2585  Non0_acc_2: 0.4484  Non0_F1_score: 0.2777  Mult_acc_5: 0.1931  Mult_acc_7: 0.1931  MAE: 1.3414  Corr: -0.0035 
+2025-09-05 20:04:25,603 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 1.2326 
+2025-09-05 20:04:25,606 - MMSA [INFO] - M: >>  Has0_acc_2: 0.6856  Has0_F1_score: 0.6705  Non0_acc_2: 0.6806  Non0_F1_score: 0.6644  Mult_acc_5: 0.2489  Mult_acc_7: 0.2489  MAE: 1.2342  Corr: 0.5722 
+2025-09-05 20:04:33,865 - MMSA [INFO] - M: >>  Has0_acc_2: 0.7648  Has0_F1_score: 0.7625  Non0_acc_2: 0.7742  Non0_F1_score: 0.7713  Mult_acc_5: 0.2453  Mult_acc_7: 0.2453  MAE: 1.0231  Corr: 0.6733 
+2025-09-05 20:04:33,868 - MMSA [INFO] - T: >>  Has0_acc_2: 0.4891  Has0_F1_score: 0.4193  Non0_acc_2: 0.4891  Non0_F1_score: 0.4193  Mult_acc_5: 0.2593  Mult_acc_7: 0.2593  MAE: 1.0168  Corr: -0.1098 
+2025-09-05 20:04:33,872 - MMSA [INFO] - A: >>  Has0_acc_2: 0.5592  Has0_F1_score: 0.4011  Non0_acc_2: 0.5592  Non0_F1_score: 0.4011  Mult_acc_5: 0.3310  Mult_acc_7: 0.3310  MAE: 0.9986  Corr: -0.0401 
+2025-09-05 20:04:33,878 - MMSA [INFO] - V: >>  Has0_acc_2: 0.4502  Has0_F1_score: 0.2795  Non0_acc_2: 0.4502  Non0_F1_score: 0.2795  Mult_acc_5: 0.3146  Mult_acc_7: 0.3146  MAE: 0.9182  Corr: 0.0165 
+2025-09-05 20:04:40,282 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 1.0368 
+2025-09-05 20:04:40,286 - MMSA [INFO] - M: >>  Has0_acc_2: 0.7642  Has0_F1_score: 0.7651  Non0_acc_2: 0.7963  Non0_F1_score: 0.7966  Mult_acc_5: 0.2751  Mult_acc_7: 0.2751  MAE: 1.0450  Corr: 0.6606 
+2025-09-05 20:04:42,590 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8146  Has0_F1_score: 0.8155  Non0_acc_2: 0.8367  Non0_F1_score: 0.8371  Mult_acc_5: 0.3949  Mult_acc_7: 0.3723  MAE: 0.8334  Corr: 0.7177 
+2025-09-05 20:04:42,594 - MMSA [INFO] - T: >>  Has0_acc_2: 0.5576  Has0_F1_score: 0.4061  Non0_acc_2: 0.5576  Non0_F1_score: 0.4061  Mult_acc_5: 0.2983  Mult_acc_7: 0.2983  MAE: 0.8857  Corr: 0.5006 
+2025-09-05 20:04:42,598 - MMSA [INFO] - A: >>  Has0_acc_2: 0.5709  Has0_F1_score: 0.4149  Non0_acc_2: 0.5709  Non0_F1_score: 0.4149  Mult_acc_5: 0.4073  Mult_acc_7: 0.4073  MAE: 0.7716  Corr: -0.0017 
+2025-09-05 20:04:42,603 - MMSA [INFO] - V: >>  Has0_acc_2: 0.4564  Has0_F1_score: 0.2860  Non0_acc_2: 0.4564  Non0_F1_score: 0.2860  Mult_acc_5: 0.3871  Mult_acc_7: 0.3871  MAE: 0.7285  Corr: 0.0484 
+2025-09-05 20:04:43,147 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.9541 
+2025-09-05 20:04:43,150 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8166  Has0_F1_score: 0.8172  Non0_acc_2: 0.8426  Non0_F1_score: 0.8421  Mult_acc_5: 0.4061  Mult_acc_7: 0.3231  MAE: 0.9502  Corr: 0.7077 
+2025-09-05 20:04:50,454 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8162  Has0_F1_score: 0.8169  Non0_acc_2: 0.8416  Non0_F1_score: 0.8419  Mult_acc_5: 0.4260  Mult_acc_7: 0.3964  MAE: 0.7671  Corr: 0.7537 
+2025-09-05 20:04:50,457 - MMSA [INFO] - T: >>  Has0_acc_2: 0.5389  Has0_F1_score: 0.3783  Non0_acc_2: 0.5389  Non0_F1_score: 0.3783  Mult_acc_5: 0.3107  Mult_acc_7: 0.3107  MAE: 0.8138  Corr: 0.6941 
+2025-09-05 20:04:50,461 - MMSA [INFO] - A: >>  Has0_acc_2: 0.5592  Has0_F1_score: 0.4011  Non0_acc_2: 0.5592  Non0_F1_score: 0.4011  Mult_acc_5: 0.4634  Mult_acc_7: 0.4634  MAE: 0.6357  Corr: 0.0092 
+2025-09-05 20:04:50,467 - MMSA [INFO] - V: >>  Has0_acc_2: 0.4696  Has0_F1_score: 0.3001  Non0_acc_2: 0.4696  Non0_F1_score: 0.3001  Mult_acc_5: 0.4665  Mult_acc_7: 0.4665  MAE: 0.6025  Corr: 0.0396 
+2025-09-05 20:04:50,987 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.8599 
+2025-09-05 20:04:50,991 - MMSA [INFO] - M: >>  Has0_acc_2: 0.7991  Has0_F1_score: 0.8010  Non0_acc_2: 0.8380  Non0_F1_score: 0.8389  Mult_acc_5: 0.4148  Mult_acc_7: 0.3362  MAE: 0.8720  Corr: 0.7330 
+2025-09-05 20:04:58,542 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8769  Has0_F1_score: 0.8774  Non0_acc_2: 0.8985  Non0_F1_score: 0.8986  Mult_acc_5: 0.4735  Mult_acc_7: 0.4408  MAE: 0.6578  Corr: 0.8248 
+2025-09-05 20:04:58,546 - MMSA [INFO] - T: >>  Has0_acc_2: 0.5218  Has0_F1_score: 0.3578  Non0_acc_2: 0.5218  Non0_F1_score: 0.3578  Mult_acc_5: 0.3372  Mult_acc_7: 0.3372  MAE: 0.7358  Corr: 0.6671 
+2025-09-05 20:04:58,550 - MMSA [INFO] - A: >>  Has0_acc_2: 0.5249  Has0_F1_score: 0.3614  Non0_acc_2: 0.5249  Non0_F1_score: 0.3614  Mult_acc_5: 0.5537  Mult_acc_7: 0.5537  MAE: 0.5268  Corr: 0.1122 
+2025-09-05 20:04:58,555 - MMSA [INFO] - V: >>  Has0_acc_2: 0.5086  Has0_F1_score: 0.3429  Non0_acc_2: 0.5086  Non0_F1_score: 0.3429  Mult_acc_5: 0.5818  Mult_acc_7: 0.5818  MAE: 0.4907  Corr: 0.0637 
+2025-09-05 20:05:05,112 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.8550 
+2025-09-05 20:05:05,116 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8122  Has0_F1_score: 0.8139  Non0_acc_2: 0.8519  Non0_F1_score: 0.8522  Mult_acc_5: 0.4367  Mult_acc_7: 0.3624  MAE: 0.8477  Corr: 0.7494 
+2025-09-05 20:05:06,035 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8832  Has0_F1_score: 0.8837  Non0_acc_2: 0.9074  Non0_F1_score: 0.9076  Mult_acc_5: 0.4938  Mult_acc_7: 0.4673  MAE: 0.6081  Corr: 0.8565 
+2025-09-05 20:05:06,039 - MMSA [INFO] - T: >>  Has0_acc_2: 0.4759  Has0_F1_score: 0.3112  Non0_acc_2: 0.4759  Non0_F1_score: 0.3112  Mult_acc_5: 0.4268  Mult_acc_7: 0.4268  MAE: 0.6671  Corr: 0.6915 
+2025-09-05 20:05:06,043 - MMSA [INFO] - A: >>  Has0_acc_2: 0.4260  Has0_F1_score: 0.2545  Non0_acc_2: 0.4260  Non0_F1_score: 0.2545  Mult_acc_5: 0.6246  Mult_acc_7: 0.6246  MAE: 0.4964  Corr: 0.1414 
+2025-09-05 20:05:06,048 - MMSA [INFO] - V: >>  Has0_acc_2: 0.6184  Has0_F1_score: 0.4726  Non0_acc_2: 0.6184  Non0_F1_score: 0.4726  Mult_acc_5: 0.6355  Mult_acc_7: 0.6355  MAE: 0.4289  Corr: 0.1092 
+2025-09-05 20:05:06,580 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.8302 
+2025-09-05 20:05:06,584 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8297  Has0_F1_score: 0.8306  Non0_acc_2: 0.8611  Non0_F1_score: 0.8609  Mult_acc_5: 0.4410  Mult_acc_7: 0.3624  MAE: 0.8129  Corr: 0.7621 
+2025-09-05 20:05:13,963 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8980  Has0_F1_score: 0.8985  Non0_acc_2: 0.9180  Non0_F1_score: 0.9182  Mult_acc_5: 0.5405  Mult_acc_7: 0.5062  MAE: 0.5392  Corr: 0.8814 
+2025-09-05 20:05:13,967 - MMSA [INFO] - T: >>  Has0_acc_2: 0.5249  Has0_F1_score: 0.4685  Non0_acc_2: 0.5249  Non0_F1_score: 0.4685  Mult_acc_5: 0.4595  Mult_acc_7: 0.4595  MAE: 0.6495  Corr: 0.6223 
+2025-09-05 20:05:13,970 - MMSA [INFO] - A: >>  Has0_acc_2: 0.3240  Has0_F1_score: 0.1586  Non0_acc_2: 0.3240  Non0_F1_score: 0.1586  Mult_acc_5: 0.6160  Mult_acc_7: 0.6160  MAE: 0.5200  Corr: 0.1134 
+2025-09-05 20:05:13,975 - MMSA [INFO] - V: >>  Has0_acc_2: 0.7282  Has0_F1_score: 0.6137  Non0_acc_2: 0.7282  Non0_F1_score: 0.6137  Mult_acc_5: 0.6121  Mult_acc_7: 0.6121  MAE: 0.4374  Corr: 0.1191 
+2025-09-05 20:05:14,095 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.8396 
+2025-09-05 20:05:14,098 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8079  Has0_F1_score: 0.8096  Non0_acc_2: 0.8426  Non0_F1_score: 0.8431  Mult_acc_5: 0.4148  Mult_acc_7: 0.3362  MAE: 0.8108  Corr: 0.7653 
+2025-09-05 20:05:19,001 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9174  Has0_F1_score: 0.9178  Non0_acc_2: 0.9383  Non0_F1_score: 0.9384  Mult_acc_5: 0.5755  Mult_acc_7: 0.5389  MAE: 0.4889  Corr: 0.9032 
+2025-09-05 20:05:19,005 - MMSA [INFO] - T: >>  Has0_acc_2: 0.6900  Has0_F1_score: 0.6888  Non0_acc_2: 0.6900  Non0_F1_score: 0.6888  Mult_acc_5: 0.4486  Mult_acc_7: 0.4486  MAE: 0.6360  Corr: 0.6388 
+2025-09-05 20:05:19,009 - MMSA [INFO] - A: >>  Has0_acc_2: 0.2960  Has0_F1_score: 0.1352  Non0_acc_2: 0.2960  Non0_F1_score: 0.1352  Mult_acc_5: 0.6028  Mult_acc_7: 0.6028  MAE: 0.5354  Corr: 0.0890 
+2025-09-05 20:05:19,013 - MMSA [INFO] - V: >>  Has0_acc_2: 0.7500  Has0_F1_score: 0.6429  Non0_acc_2: 0.7500  Non0_F1_score: 0.6429  Mult_acc_5: 0.5872  Mult_acc_7: 0.5872  MAE: 0.4573  Corr: 0.0672 
+2025-09-05 20:05:19,559 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.7884 
+2025-09-05 20:05:19,563 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8035  Has0_F1_score: 0.8053  Non0_acc_2: 0.8380  Non0_F1_score: 0.8386  Mult_acc_5: 0.4891  Mult_acc_7: 0.3799  MAE: 0.7929  Corr: 0.7769 
+2025-09-05 20:05:27,734 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9167  Has0_F1_score: 0.9169  Non0_acc_2: 0.9358  Non0_F1_score: 0.9359  Mult_acc_5: 0.6332  Mult_acc_7: 0.5872  MAE: 0.4392  Corr: 0.9176 
+2025-09-05 20:05:27,737 - MMSA [INFO] - T: >>  Has0_acc_2: 0.7196  Has0_F1_score: 0.7267  Non0_acc_2: 0.7196  Non0_F1_score: 0.7267  Mult_acc_5: 0.3879  Mult_acc_7: 0.3879  MAE: 0.6689  Corr: 0.6742 
+2025-09-05 20:05:27,741 - MMSA [INFO] - A: >>  Has0_acc_2: 0.2687  Has0_F1_score: 0.1138  Non0_acc_2: 0.2687  Non0_F1_score: 0.1138  Mult_acc_5: 0.5724  Mult_acc_7: 0.5724  MAE: 0.5599  Corr: 0.1367 
+2025-09-05 20:05:27,747 - MMSA [INFO] - V: >>  Has0_acc_2: 0.7788  Has0_F1_score: 0.6820  Non0_acc_2: 0.7788  Non0_F1_score: 0.6820  Mult_acc_5: 0.5576  Mult_acc_7: 0.5576  MAE: 0.4839  Corr: 0.0937 
+2025-09-05 20:05:28,314 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.7982 
+2025-09-05 20:05:28,318 - MMSA [INFO] - M: >>  Has0_acc_2: 0.7991  Has0_F1_score: 0.8010  Non0_acc_2: 0.8333  Non0_F1_score: 0.8340  Mult_acc_5: 0.5153  Mult_acc_7: 0.3974  MAE: 0.7873  Corr: 0.7817 
+2025-09-05 20:05:33,237 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9322  Has0_F1_score: 0.9325  Non0_acc_2: 0.9513  Non0_F1_score: 0.9513  Mult_acc_5: 0.6869  Mult_acc_7: 0.6394  MAE: 0.3934  Corr: 0.9308 
+2025-09-05 20:05:33,241 - MMSA [INFO] - T: >>  Has0_acc_2: 0.7632  Has0_F1_score: 0.7703  Non0_acc_2: 0.7632  Non0_F1_score: 0.7703  Mult_acc_5: 0.3512  Mult_acc_7: 0.3512  MAE: 0.7022  Corr: 0.7031 
+2025-09-05 20:05:33,245 - MMSA [INFO] - A: >>  Has0_acc_2: 0.2477  Has0_F1_score: 0.0983  Non0_acc_2: 0.2477  Non0_F1_score: 0.0983  Mult_acc_5: 0.5498  Mult_acc_7: 0.5498  MAE: 0.5820  Corr: 0.0973 
+2025-09-05 20:05:33,250 - MMSA [INFO] - V: >>  Has0_acc_2: 0.8014  Has0_F1_score: 0.7131  Non0_acc_2: 0.8014  Non0_F1_score: 0.7131  Mult_acc_5: 0.5296  Mult_acc_7: 0.5296  MAE: 0.5098  Corr: 0.0390 
+2025-09-05 20:05:33,793 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.7472 
+2025-09-05 20:05:33,797 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8122  Has0_F1_score: 0.8132  Non0_acc_2: 0.8426  Non0_F1_score: 0.8424  Mult_acc_5: 0.5153  Mult_acc_7: 0.4017  MAE: 0.7565  Corr: 0.7888 
+2025-09-05 20:05:40,954 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9276  Has0_F1_score: 0.9278  Non0_acc_2: 0.9513  Non0_F1_score: 0.9513  Mult_acc_5: 0.7329  Mult_acc_7: 0.6822  MAE: 0.3507  Corr: 0.9448 
+2025-09-05 20:05:40,958 - MMSA [INFO] - T: >>  Has0_acc_2: 0.7960  Has0_F1_score: 0.8029  Non0_acc_2: 0.7960  Non0_F1_score: 0.8029  Mult_acc_5: 0.3271  Mult_acc_7: 0.3271  MAE: 0.7236  Corr: 0.7001 
+2025-09-05 20:05:40,961 - MMSA [INFO] - A: >>  Has0_acc_2: 0.2274  Has0_F1_score: 0.0843  Non0_acc_2: 0.2274  Non0_F1_score: 0.0843  Mult_acc_5: 0.5335  Mult_acc_7: 0.5335  MAE: 0.6053  Corr: 0.1116 
+2025-09-05 20:05:40,966 - MMSA [INFO] - V: >>  Has0_acc_2: 0.8193  Has0_F1_score: 0.7379  Non0_acc_2: 0.8193  Non0_F1_score: 0.7379  Mult_acc_5: 0.5125  Mult_acc_7: 0.5125  MAE: 0.5368  Corr: 0.0147 
+2025-09-05 20:05:41,542 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.7624 
+2025-09-05 20:05:41,546 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8079  Has0_F1_score: 0.8090  Non0_acc_2: 0.8380  Non0_F1_score: 0.8378  Mult_acc_5: 0.5240  Mult_acc_7: 0.4061  MAE: 0.7512  Corr: 0.7889 
+2025-09-05 20:05:53,099 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9361  Has0_F1_score: 0.9363  Non0_acc_2: 0.9537  Non0_F1_score: 0.9537  Mult_acc_5: 0.7399  Mult_acc_7: 0.6869  MAE: 0.3207  Corr: 0.9539 
+2025-09-05 20:05:53,103 - MMSA [INFO] - T: >>  Has0_acc_2: 0.8520  Has0_F1_score: 0.8549  Non0_acc_2: 0.8520  Non0_F1_score: 0.8549  Mult_acc_5: 0.3069  Mult_acc_7: 0.3069  MAE: 0.7332  Corr: 0.7211 
+2025-09-05 20:05:53,107 - MMSA [INFO] - A: >>  Has0_acc_2: 0.2157  Has0_F1_score: 0.0766  Non0_acc_2: 0.2157  Non0_F1_score: 0.0766  Mult_acc_5: 0.5202  Mult_acc_7: 0.5202  MAE: 0.6221  Corr: 0.0720 
+2025-09-05 20:05:53,111 - MMSA [INFO] - V: >>  Has0_acc_2: 0.8380  Has0_F1_score: 0.7641  Non0_acc_2: 0.8380  Non0_F1_score: 0.7641  Mult_acc_5: 0.5039  Mult_acc_7: 0.5039  MAE: 0.5535  Corr: -0.0119 
+2025-09-05 20:05:53,691 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.7285 
+2025-09-05 20:05:53,695 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8035  Has0_F1_score: 0.8049  Non0_acc_2: 0.8333  Non0_F1_score: 0.8336  Mult_acc_5: 0.5328  Mult_acc_7: 0.4192  MAE: 0.7386  Corr: 0.7909 
+2025-09-05 20:06:02,541 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9424  Has0_F1_score: 0.9425  Non0_acc_2: 0.9602  Non0_F1_score: 0.9602  Mult_acc_5: 0.7531  Mult_acc_7: 0.6994  MAE: 0.2985  Corr: 0.9595 
+2025-09-05 20:06:02,545 - MMSA [INFO] - T: >>  Has0_acc_2: 0.8785  Has0_F1_score: 0.8800  Non0_acc_2: 0.8785  Non0_F1_score: 0.8800  Mult_acc_5: 0.3092  Mult_acc_7: 0.3092  MAE: 0.7382  Corr: 0.7348 
+2025-09-05 20:06:02,549 - MMSA [INFO] - A: >>  Has0_acc_2: 0.2788  Has0_F1_score: 0.2081  Non0_acc_2: 0.2788  Non0_F1_score: 0.2081  Mult_acc_5: 0.5101  Mult_acc_7: 0.5101  MAE: 0.6281  Corr: 0.1373 
+2025-09-05 20:06:02,554 - MMSA [INFO] - V: >>  Has0_acc_2: 0.8450  Has0_F1_score: 0.7740  Non0_acc_2: 0.8450  Non0_F1_score: 0.7740  Mult_acc_5: 0.4914  Mult_acc_7: 0.4914  MAE: 0.5553  Corr: 0.0451 
+2025-09-05 20:06:03,297 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.7201 
+2025-09-05 20:06:03,302 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8253  Has0_F1_score: 0.8253  Non0_acc_2: 0.8565  Non0_F1_score: 0.8553  Mult_acc_5: 0.5502  Mult_acc_7: 0.4410  MAE: 0.7241  Corr: 0.7960 
+2025-09-05 20:06:04,323 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9447  Has0_F1_score: 0.9448  Non0_acc_2: 0.9651  Non0_F1_score: 0.9650  Mult_acc_5: 0.7835  Mult_acc_7: 0.7305  MAE: 0.2879  Corr: 0.9631 
+2025-09-05 20:06:04,327 - MMSA [INFO] - T: >>  Has0_acc_2: 0.9221  Has0_F1_score: 0.9219  Non0_acc_2: 0.9221  Non0_F1_score: 0.9219  Mult_acc_5: 0.3131  Mult_acc_7: 0.3131  MAE: 0.7170  Corr: 0.7484 
+2025-09-05 20:06:04,331 - MMSA [INFO] - A: >>  Has0_acc_2: 0.7422  Has0_F1_score: 0.7345  Non0_acc_2: 0.7422  Non0_F1_score: 0.7345  Mult_acc_5: 0.4961  Mult_acc_7: 0.4961  MAE: 0.6321  Corr: 0.1504 
+2025-09-05 20:06:04,335 - MMSA [INFO] - V: >>  Has0_acc_2: 0.8536  Has0_F1_score: 0.7862  Non0_acc_2: 0.8536  Non0_F1_score: 0.7862  Mult_acc_5: 0.4914  Mult_acc_7: 0.4914  MAE: 0.5569  Corr: 0.0097 
+2025-09-05 20:06:04,898 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.7158 
+2025-09-05 20:06:04,903 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8210  Has0_F1_score: 0.8211  Non0_acc_2: 0.8472  Non0_F1_score: 0.8463  Mult_acc_5: 0.5328  Mult_acc_7: 0.4236  MAE: 0.7159  Corr: 0.8017 
+2025-09-05 20:06:12,607 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9502  Has0_F1_score: 0.9503  Non0_acc_2: 0.9659  Non0_F1_score: 0.9659  Mult_acc_5: 0.7928  Mult_acc_7: 0.7391  MAE: 0.2799  Corr: 0.9655 
+2025-09-05 20:06:12,611 - MMSA [INFO] - T: >>  Has0_acc_2: 0.9393  Has0_F1_score: 0.9386  Non0_acc_2: 0.9393  Non0_F1_score: 0.9386  Mult_acc_5: 0.3170  Mult_acc_7: 0.3170  MAE: 0.6791  Corr: 0.7654 
+2025-09-05 20:06:12,616 - MMSA [INFO] - A: >>  Has0_acc_2: 0.7874  Has0_F1_score: 0.6937  Non0_acc_2: 0.7874  Non0_F1_score: 0.6937  Mult_acc_5: 0.4907  Mult_acc_7: 0.4907  MAE: 0.6356  Corr: 0.1413 
+2025-09-05 20:06:12,621 - MMSA [INFO] - V: >>  Has0_acc_2: 0.8606  Has0_F1_score: 0.7961  Non0_acc_2: 0.8606  Non0_F1_score: 0.7961  Mult_acc_5: 0.4945  Mult_acc_7: 0.4945  MAE: 0.5597  Corr: -0.0360 
+2025-09-05 20:06:13,203 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.6917 
+2025-09-05 20:06:13,206 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8253  Has0_F1_score: 0.8256  Non0_acc_2: 0.8472  Non0_F1_score: 0.8466  Mult_acc_5: 0.5546  Mult_acc_7: 0.4410  MAE: 0.7076  Corr: 0.8049 
+2025-09-05 20:06:20,198 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9494  Has0_F1_score: 0.9495  Non0_acc_2: 0.9683  Non0_F1_score: 0.9683  Mult_acc_5: 0.8045  Mult_acc_7: 0.7508  MAE: 0.2598  Corr: 0.9701 
+2025-09-05 20:06:20,202 - MMSA [INFO] - T: >>  Has0_acc_2: 0.9447  Has0_F1_score: 0.9441  Non0_acc_2: 0.9447  Non0_F1_score: 0.9441  Mult_acc_5: 0.4019  Mult_acc_7: 0.4019  MAE: 0.6321  Corr: 0.7815 
+2025-09-05 20:06:20,206 - MMSA [INFO] - A: >>  Has0_acc_2: 0.7936  Has0_F1_score: 0.7023  Non0_acc_2: 0.7936  Non0_F1_score: 0.7023  Mult_acc_5: 0.4852  Mult_acc_7: 0.4852  MAE: 0.6378  Corr: 0.1847 
+2025-09-05 20:06:20,211 - MMSA [INFO] - V: >>  Has0_acc_2: 0.8614  Has0_F1_score: 0.7972  Non0_acc_2: 0.8614  Non0_F1_score: 0.7972  Mult_acc_5: 0.4953  Mult_acc_7: 0.4953  MAE: 0.5584  Corr: 0.0006 
+2025-09-05 20:06:20,814 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.6980 
+2025-09-05 20:06:20,818 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8210  Has0_F1_score: 0.8217  Non0_acc_2: 0.8472  Non0_F1_score: 0.8469  Mult_acc_5: 0.5633  Mult_acc_7: 0.4498  MAE: 0.6998  Corr: 0.8069 
+2025-09-05 20:06:26,013 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9502  Has0_F1_score: 0.9502  Non0_acc_2: 0.9699  Non0_F1_score: 0.9699  Mult_acc_5: 0.8092  Mult_acc_7: 0.7555  MAE: 0.2514  Corr: 0.9725 
+2025-09-05 20:06:26,017 - MMSA [INFO] - T: >>  Has0_acc_2: 0.9502  Has0_F1_score: 0.9492  Non0_acc_2: 0.9502  Non0_F1_score: 0.9492  Mult_acc_5: 0.5366  Mult_acc_7: 0.5366  MAE: 0.5707  Corr: 0.7974 
+2025-09-05 20:06:26,021 - MMSA [INFO] - A: >>  Has0_acc_2: 0.7944  Has0_F1_score: 0.7034  Non0_acc_2: 0.7944  Non0_F1_score: 0.7034  Mult_acc_5: 0.4743  Mult_acc_7: 0.4743  MAE: 0.6401  Corr: 0.2137 
+2025-09-05 20:06:26,026 - MMSA [INFO] - V: >>  Has0_acc_2: 0.8660  Has0_F1_score: 0.8039  Non0_acc_2: 0.8660  Non0_F1_score: 0.8039  Mult_acc_5: 0.5039  Mult_acc_7: 0.5039  MAE: 0.5544  Corr: -0.0004 
+2025-09-05 20:06:26,627 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.7183 
+2025-09-05 20:06:26,631 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8384  Has0_F1_score: 0.8380  Non0_acc_2: 0.8611  Non0_F1_score: 0.8598  Mult_acc_5: 0.5459  Mult_acc_7: 0.4367  MAE: 0.7077  Corr: 0.8070 
+2025-09-05 20:06:31,891 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9517  Has0_F1_score: 0.9518  Non0_acc_2: 0.9651  Non0_F1_score: 0.9651  Mult_acc_5: 0.8115  Mult_acc_7: 0.7578  MAE: 0.2500  Corr: 0.9742 
+2025-09-05 20:06:31,895 - MMSA [INFO] - T: >>  Has0_acc_2: 0.9634  Has0_F1_score: 0.9626  Non0_acc_2: 0.9634  Non0_F1_score: 0.9626  Mult_acc_5: 0.5319  Mult_acc_7: 0.5319  MAE: 0.5299  Corr: 0.8132 
+2025-09-05 20:06:31,900 - MMSA [INFO] - A: >>  Has0_acc_2: 0.7983  Has0_F1_score: 0.7087  Non0_acc_2: 0.7983  Non0_F1_score: 0.7087  Mult_acc_5: 0.4673  Mult_acc_7: 0.4673  MAE: 0.6424  Corr: 0.2256 
+2025-09-05 20:06:31,905 - MMSA [INFO] - V: >>  Has0_acc_2: 0.8653  Has0_F1_score: 0.8028  Non0_acc_2: 0.8653  Non0_F1_score: 0.8028  Mult_acc_5: 0.5062  Mult_acc_7: 0.5062  MAE: 0.5548  Corr: 0.0120 
+2025-09-05 20:06:32,470 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.7035 
+2025-09-05 20:06:32,474 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8515  Has0_F1_score: 0.8506  Non0_acc_2: 0.8657  Non0_F1_score: 0.8643  Mult_acc_5: 0.5328  Mult_acc_7: 0.4236  MAE: 0.7105  Corr: 0.8047 
+2025-09-05 20:06:37,669 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9579  Has0_F1_score: 0.9580  Non0_acc_2: 0.9724  Non0_F1_score: 0.9723  Mult_acc_5: 0.8030  Mult_acc_7: 0.7492  MAE: 0.2405  Corr: 0.9761 
+2025-09-05 20:06:37,673 - MMSA [INFO] - T: >>  Has0_acc_2: 0.9642  Has0_F1_score: 0.9635  Non0_acc_2: 0.9642  Non0_F1_score: 0.9635  Mult_acc_5: 0.5086  Mult_acc_7: 0.5086  MAE: 0.5340  Corr: 0.8221 
+2025-09-05 20:06:37,677 - MMSA [INFO] - A: >>  Has0_acc_2: 0.7975  Has0_F1_score: 0.7077  Non0_acc_2: 0.7975  Non0_F1_score: 0.7077  Mult_acc_5: 0.4587  Mult_acc_7: 0.4587  MAE: 0.6418  Corr: 0.2291 
+2025-09-05 20:06:37,682 - MMSA [INFO] - V: >>  Has0_acc_2: 0.8692  Has0_F1_score: 0.8083  Non0_acc_2: 0.8692  Non0_F1_score: 0.8083  Mult_acc_5: 0.5039  Mult_acc_7: 0.5039  MAE: 0.5562  Corr: 0.0133 
+2025-09-05 20:06:38,262 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.6981 
+2025-09-05 20:06:38,265 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8384  Has0_F1_score: 0.8380  Non0_acc_2: 0.8611  Non0_F1_score: 0.8598  Mult_acc_5: 0.5546  Mult_acc_7: 0.4410  MAE: 0.6968  Corr: 0.8059 
+2025-09-05 20:06:43,316 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9673  Has0_F1_score: 0.9673  Non0_acc_2: 0.9813  Non0_F1_score: 0.9813  Mult_acc_5: 0.8287  Mult_acc_7: 0.7749  MAE: 0.2160  Corr: 0.9799 
+2025-09-05 20:06:43,321 - MMSA [INFO] - T: >>  Has0_acc_2: 0.9727  Has0_F1_score: 0.9723  Non0_acc_2: 0.9727  Non0_F1_score: 0.9723  Mult_acc_5: 0.5335  Mult_acc_7: 0.5327  MAE: 0.5472  Corr: 0.8364 
+2025-09-05 20:06:43,324 - MMSA [INFO] - A: >>  Has0_acc_2: 0.8006  Has0_F1_score: 0.7120  Non0_acc_2: 0.8006  Non0_F1_score: 0.7120  Mult_acc_5: 0.4502  Mult_acc_7: 0.4502  MAE: 0.6378  Corr: 0.2271 
+2025-09-05 20:06:43,329 - MMSA [INFO] - V: >>  Has0_acc_2: 0.8660  Has0_F1_score: 0.8039  Non0_acc_2: 0.8660  Non0_F1_score: 0.8039  Mult_acc_5: 0.4992  Mult_acc_7: 0.4992  MAE: 0.5605  Corr: 0.0047 
+2025-09-05 20:06:43,897 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.7175 
+2025-09-05 20:06:43,901 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8122  Has0_F1_score: 0.8130  Non0_acc_2: 0.8426  Non0_F1_score: 0.8421  Mult_acc_5: 0.5240  Mult_acc_7: 0.4105  MAE: 0.7035  Corr: 0.8054 
+2025-09-05 20:06:48,887 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9540  Has0_F1_score: 0.9542  Non0_acc_2: 0.9773  Non0_F1_score: 0.9773  Mult_acc_5: 0.8240  Mult_acc_7: 0.7702  MAE: 0.2112  Corr: 0.9810 
+2025-09-05 20:06:48,891 - MMSA [INFO] - T: >>  Has0_acc_2: 0.9696  Has0_F1_score: 0.9689  Non0_acc_2: 0.9696  Non0_F1_score: 0.9689  Mult_acc_5: 0.5234  Mult_acc_7: 0.5226  MAE: 0.5499  Corr: 0.8513 
+2025-09-05 20:06:48,896 - MMSA [INFO] - A: >>  Has0_acc_2: 0.8030  Has0_F1_score: 0.7152  Non0_acc_2: 0.8030  Non0_F1_score: 0.7152  Mult_acc_5: 0.4408  Mult_acc_7: 0.4408  MAE: 0.6344  Corr: 0.2505 
+2025-09-05 20:06:48,901 - MMSA [INFO] - V: >>  Has0_acc_2: 0.8575  Has0_F1_score: 0.7917  Non0_acc_2: 0.8575  Non0_F1_score: 0.7917  Mult_acc_5: 0.4907  Mult_acc_7: 0.4907  MAE: 0.5722  Corr: 0.0377 
+2025-09-05 20:06:55,419 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.7153 
+2025-09-05 20:06:55,422 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8122  Has0_F1_score: 0.8137  Non0_acc_2: 0.8426  Non0_F1_score: 0.8430  Mult_acc_5: 0.5415  Mult_acc_7: 0.4279  MAE: 0.7045  Corr: 0.8080 
+2025-09-05 20:06:54,068 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9673  Has0_F1_score: 0.9674  Non0_acc_2: 0.9854  Non0_F1_score: 0.9854  Mult_acc_5: 0.8419  Mult_acc_7: 0.7882  MAE: 0.2176  Corr: 0.9806 
+2025-09-05 20:06:54,072 - MMSA [INFO] - T: >>  Has0_acc_2: 0.9704  Has0_F1_score: 0.9697  Non0_acc_2: 0.9704  Non0_F1_score: 0.9697  Mult_acc_5: 0.5475  Mult_acc_7: 0.5467  MAE: 0.5471  Corr: 0.8622 
+2025-09-05 20:06:54,075 - MMSA [INFO] - A: >>  Has0_acc_2: 0.8006  Has0_F1_score: 0.7120  Non0_acc_2: 0.8006  Non0_F1_score: 0.7120  Mult_acc_5: 0.4315  Mult_acc_7: 0.4315  MAE: 0.6360  Corr: 0.2603 
+2025-09-05 20:06:54,080 - MMSA [INFO] - V: >>  Has0_acc_2: 0.8505  Has0_F1_score: 0.7817  Non0_acc_2: 0.8505  Non0_F1_score: 0.7817  Mult_acc_5: 0.4813  Mult_acc_7: 0.4813  MAE: 0.5851  Corr: 0.0655 
+2025-09-05 20:06:54,640 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.6999 
+2025-09-05 20:06:54,644 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8166  Has0_F1_score: 0.8180  Non0_acc_2: 0.8426  Non0_F1_score: 0.8430  Mult_acc_5: 0.5371  Mult_acc_7: 0.4236  MAE: 0.6964  Corr: 0.8083 
+2025-09-05 20:06:59,919 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9509  Has0_F1_score: 0.9511  Non0_acc_2: 0.9756  Non0_F1_score: 0.9756  Mult_acc_5: 0.8364  Mult_acc_7: 0.7819  MAE: 0.2067  Corr: 0.9829 
+2025-09-05 20:06:59,923 - MMSA [INFO] - T: >>  Has0_acc_2: 0.9673  Has0_F1_score: 0.9667  Non0_acc_2: 0.9673  Non0_F1_score: 0.9667  Mult_acc_5: 0.5444  Mult_acc_7: 0.5436  MAE: 0.5580  Corr: 0.8598 
+2025-09-05 20:06:59,927 - MMSA [INFO] - A: >>  Has0_acc_2: 0.7998  Has0_F1_score: 0.7109  Non0_acc_2: 0.7998  Non0_F1_score: 0.7109  Mult_acc_5: 0.4283  Mult_acc_7: 0.4283  MAE: 0.6356  Corr: 0.2522 
+2025-09-05 20:06:59,933 - MMSA [INFO] - V: >>  Has0_acc_2: 0.8520  Has0_F1_score: 0.7839  Non0_acc_2: 0.8520  Non0_F1_score: 0.7839  Mult_acc_5: 0.4618  Mult_acc_7: 0.4618  MAE: 0.5975  Corr: 0.0814 
+2025-09-05 20:07:00,515 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.6927 
+2025-09-05 20:07:00,519 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8210  Has0_F1_score: 0.8219  Non0_acc_2: 0.8472  Non0_F1_score: 0.8471  Mult_acc_5: 0.5502  Mult_acc_7: 0.4367  MAE: 0.6926  Corr: 0.8094 
+2025-09-05 20:07:03,793 - MMSA [INFO] - TEST-(tetfn_crt) >> loss: 0.7710 
+2025-09-05 20:07:03,797 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8090  Has0_F1_score: 0.8092  Non0_acc_2: 0.8216  Non0_F1_score: 0.8224  Mult_acc_5: 0.5058  Mult_acc_7: 0.4359  MAE: 0.7725  Corr: 0.7783 
+2025-09-05 20:07:04,464 - MMSA [INFO] - Result for seed 1111: {'Has0_acc_2': 0.809, 'Has0_F1_score': 0.8092, 'Non0_acc_2': 0.8216, 'Non0_F1_score': 0.8224, 'Mult_acc_5': np.float64(0.5058), 'Mult_acc_7': np.float64(0.4359), 'MAE': np.float64(0.7725), 'Corr': np.float64(0.7783), 'Loss': 0.771}
+2025-09-05 20:07:04,479 - MMSA [INFO] - Results saved to results/normal/mosi.csv.
+2025-09-05 20:09:17,577 - MMSA [INFO] - ======================================== Program Start ========================================
+2025-09-05 20:09:17,747 - MMSA [INFO] - Running with args:
+2025-09-05 20:09:17,748 - MMSA [INFO] - {'model_name': 'tetfn_crt', 'dataset_name': 'mosi', 'featurePath': 'data/MOSI/Processed/aligned_50.pkl', 'seq_lens': [50, 50, 50], 'feature_dims': [768, 5, 20], 'train_samples': 1284, 'num_classes': 3, 'language': 'en', 'KeyEval': 'Loss', 'missing_rate': [0.2, 0.2, 0.2], 'missing_seed': [1111, 1111, 1111], 'need_data_aligned': True, 'need_model_aligned': True, 'need_normalized': False, 'use_bert': True, 'use_finetune': True, 'save_labels': False, 'early_stop': 8, 'update_epochs': 4, 'batch_size': 64, 'transformers': 'bert', 'pretrained': 'bert-base-uncased', 'a_lstm_hidden_size': 16, 'a_lstm_layers': 1, 'a_lstm_dropout': 0.0, 'v_lstm_hidden_size': 64, 'v_lstm_layers': 1, 'v_lstm_dropout': 0.0, 'conv1d_kernel_size_l': 1, 'conv1d_kernel_size_a': 1, 'conv1d_kernel_size_v': 3, 'dst_feature_dims': 50, 'nheads': 5, 'attn_dropout': 0.1, 'attn_dropout_a': 0.0, 'attn_dropout_v': 0.1, 'relu_dropout': 0.0, 'embed_dropout': 0.0, 'res_dropout': 0.1, 'post_fusion_dropout': 0.0, 'post_fusion_dim': 64, 'post_text_dropout': 0.0, 'post_text_dim': 32, 'post_audio_dropout': 0.0, 'post_audio_dim': 32, 'post_video_dropout': 0.0, 'post_video_dim': 16, 'excludeZero': True, 'H': 3, 'decay': False, 'weight_decay_bert': 0.001, 'learning_rate_bert': 3e-05, 'weight_decay_audio': 0.01, 'use_info_bottleneck': True, 'use_text_debias': True, 'bottleneck_dim': 25, 'info_bottleneck_beta': 0.001, 'info_bottleneck_dropout': 0.1, 'debias_model_dim': 128, 'debias_num_heads': 8, 'debias_num_layers': 2, 'debias_dropout': 0.1, 'debias_confounder_size': 50, 'use_kmeans_init': False, 'info_bottleneck_weight': 0.1, 'weight_decay_video': 0.0, 'weight_decay_other': 0.01, 'learning_rate_audio': 0.0005, 'learning_rate_video': 0.0003, 'learning_rate_other': 0.0003, 'model_save_path': PosixPath('save_models/tetfn_crt-mosi.pth'), 'device': device(type='cuda', index=0), 'train_mode': 'regression', 'custom_feature': None, 'feature_T': None, 'feature_A': None, 'feature_V': None}
+2025-09-05 20:09:17,748 - MMSA [INFO] - Seeds: [1111]
+2025-09-05 20:09:17,754 - MMSA [INFO] - ------------------------------ Running with seed 1111 [1/1] ------------------------------
+2025-09-05 20:09:19,742 - MMSA [INFO] - train samples: (1284,)
+2025-09-05 20:09:21,117 - MMSA [INFO] - valid samples: (229,)
+2025-09-05 20:09:22,617 - MMSA [INFO] - test samples: (686,)
+2025-09-05 20:09:26,706 - MMSA [INFO] - The model has 110905064 trainable parameters
+2025-09-05 20:09:26,712 - MMSA [INFO] - Init labels
+2025-09-05 20:09:26,869 - MMSA [INFO] - Start training
+2025-09-05 20:09:32,289 - MMSA [INFO] - M: >>  Has0_acc_2: 0.5506  Has0_F1_score: 0.5007  Non0_acc_2: 0.5410  Non0_F1_score: 0.4890  Mult_acc_5: 0.1931  Mult_acc_7: 0.1931  MAE: 1.3106  Corr: 0.1134 
+2025-09-05 20:09:32,293 - MMSA [INFO] - T: >>  Has0_acc_2: 0.5234  Has0_F1_score: 0.4450  Non0_acc_2: 0.5093  Non0_F1_score: 0.4284  Mult_acc_5: 0.1931  Mult_acc_7: 0.1931  MAE: 1.3296  Corr: -0.1067 
+2025-09-05 20:09:32,297 - MMSA [INFO] - A: >>  Has0_acc_2: 0.5701  Has0_F1_score: 0.4140  Non0_acc_2: 0.5516  Non0_F1_score: 0.3922  Mult_acc_5: 0.1931  Mult_acc_7: 0.1931  MAE: 1.3217  Corr: 0.0259 
+2025-09-05 20:09:32,302 - MMSA [INFO] - V: >>  Has0_acc_2: 0.4299  Has0_F1_score: 0.2585  Non0_acc_2: 0.4484  Non0_F1_score: 0.2777  Mult_acc_5: 0.1931  Mult_acc_7: 0.1931  MAE: 1.3415  Corr: 0.0435 
+2025-09-05 20:09:32,811 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 1.4028 
+2025-09-05 20:09:32,815 - MMSA [INFO] - M: >>  Has0_acc_2: 0.5983  Has0_F1_score: 0.4479  Non0_acc_2: 0.5741  Non0_F1_score: 0.4187  Mult_acc_5: 0.2358  Mult_acc_7: 0.2358  MAE: 1.3813  Corr: 0.3642 
+2025-09-05 20:09:40,268 - MMSA [INFO] - M: >>  Has0_acc_2: 0.6176  Has0_F1_score: 0.5297  Non0_acc_2: 0.6060  Non0_F1_score: 0.5156  Mult_acc_5: 0.2212  Mult_acc_7: 0.2212  MAE: 1.2264  Corr: 0.5023 
+2025-09-05 20:09:40,272 - MMSA [INFO] - T: >>  Has0_acc_2: 0.4914  Has0_F1_score: 0.4528  Non0_acc_2: 0.4760  Non0_F1_score: 0.4366  Mult_acc_5: 0.1931  Mult_acc_7: 0.1931  MAE: 1.3307  Corr: -0.1849 
+2025-09-05 20:09:40,275 - MMSA [INFO] - A: >>  Has0_acc_2: 0.5701  Has0_F1_score: 0.4140  Non0_acc_2: 0.5516  Non0_F1_score: 0.3922  Mult_acc_5: 0.1931  Mult_acc_7: 0.1931  MAE: 1.3219  Corr: 0.0651 
+2025-09-05 20:09:40,280 - MMSA [INFO] - V: >>  Has0_acc_2: 0.4299  Has0_F1_score: 0.2585  Non0_acc_2: 0.4484  Non0_F1_score: 0.2777  Mult_acc_5: 0.1931  Mult_acc_7: 0.1931  MAE: 1.3414  Corr: -0.0035 
+2025-09-05 20:09:40,792 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 1.2326 
+2025-09-05 20:09:40,796 - MMSA [INFO] - M: >>  Has0_acc_2: 0.6856  Has0_F1_score: 0.6705  Non0_acc_2: 0.6806  Non0_F1_score: 0.6644  Mult_acc_5: 0.2489  Mult_acc_7: 0.2489  MAE: 1.2342  Corr: 0.5722 
+2025-09-05 20:09:48,652 - MMSA [INFO] - M: >>  Has0_acc_2: 0.7648  Has0_F1_score: 0.7625  Non0_acc_2: 0.7742  Non0_F1_score: 0.7713  Mult_acc_5: 0.2453  Mult_acc_7: 0.2453  MAE: 1.0231  Corr: 0.6733 
+2025-09-05 20:09:48,656 - MMSA [INFO] - T: >>  Has0_acc_2: 0.4891  Has0_F1_score: 0.4193  Non0_acc_2: 0.4891  Non0_F1_score: 0.4193  Mult_acc_5: 0.2593  Mult_acc_7: 0.2593  MAE: 1.0168  Corr: -0.1098 
+2025-09-05 20:09:48,660 - MMSA [INFO] - A: >>  Has0_acc_2: 0.5592  Has0_F1_score: 0.4011  Non0_acc_2: 0.5592  Non0_F1_score: 0.4011  Mult_acc_5: 0.3310  Mult_acc_7: 0.3310  MAE: 0.9986  Corr: -0.0401 
+2025-09-05 20:09:48,665 - MMSA [INFO] - V: >>  Has0_acc_2: 0.4502  Has0_F1_score: 0.2795  Non0_acc_2: 0.4502  Non0_F1_score: 0.2795  Mult_acc_5: 0.3146  Mult_acc_7: 0.3146  MAE: 0.9182  Corr: 0.0165 
+2025-09-05 20:09:49,201 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 1.0368 
+2025-09-05 20:09:49,205 - MMSA [INFO] - M: >>  Has0_acc_2: 0.7642  Has0_F1_score: 0.7651  Non0_acc_2: 0.7963  Non0_F1_score: 0.7966  Mult_acc_5: 0.2751  Mult_acc_7: 0.2751  MAE: 1.0450  Corr: 0.6606 
+2025-09-05 20:09:57,085 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8146  Has0_F1_score: 0.8155  Non0_acc_2: 0.8367  Non0_F1_score: 0.8371  Mult_acc_5: 0.3949  Mult_acc_7: 0.3723  MAE: 0.8334  Corr: 0.7177 
+2025-09-05 20:09:57,089 - MMSA [INFO] - T: >>  Has0_acc_2: 0.5576  Has0_F1_score: 0.4061  Non0_acc_2: 0.5576  Non0_F1_score: 0.4061  Mult_acc_5: 0.2983  Mult_acc_7: 0.2983  MAE: 0.8857  Corr: 0.5006 
+2025-09-05 20:09:57,093 - MMSA [INFO] - A: >>  Has0_acc_2: 0.5709  Has0_F1_score: 0.4149  Non0_acc_2: 0.5709  Non0_F1_score: 0.4149  Mult_acc_5: 0.4073  Mult_acc_7: 0.4073  MAE: 0.7716  Corr: -0.0017 
+2025-09-05 20:09:57,099 - MMSA [INFO] - V: >>  Has0_acc_2: 0.4564  Has0_F1_score: 0.2860  Non0_acc_2: 0.4564  Non0_F1_score: 0.2860  Mult_acc_5: 0.3871  Mult_acc_7: 0.3871  MAE: 0.7285  Corr: 0.0484 
+2025-09-05 20:09:57,709 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.9541 
+2025-09-05 20:09:57,713 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8166  Has0_F1_score: 0.8172  Non0_acc_2: 0.8426  Non0_F1_score: 0.8421  Mult_acc_5: 0.4061  Mult_acc_7: 0.3231  MAE: 0.9502  Corr: 0.7077 
+2025-09-05 20:10:05,090 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8162  Has0_F1_score: 0.8169  Non0_acc_2: 0.8416  Non0_F1_score: 0.8419  Mult_acc_5: 0.4260  Mult_acc_7: 0.3964  MAE: 0.7671  Corr: 0.7537 
+2025-09-05 20:10:05,093 - MMSA [INFO] - T: >>  Has0_acc_2: 0.5389  Has0_F1_score: 0.3783  Non0_acc_2: 0.5389  Non0_F1_score: 0.3783  Mult_acc_5: 0.3107  Mult_acc_7: 0.3107  MAE: 0.8138  Corr: 0.6941 
+2025-09-05 20:10:05,097 - MMSA [INFO] - A: >>  Has0_acc_2: 0.5592  Has0_F1_score: 0.4011  Non0_acc_2: 0.5592  Non0_F1_score: 0.4011  Mult_acc_5: 0.4634  Mult_acc_7: 0.4634  MAE: 0.6357  Corr: 0.0092 
+2025-09-05 20:10:05,101 - MMSA [INFO] - V: >>  Has0_acc_2: 0.4696  Has0_F1_score: 0.3001  Non0_acc_2: 0.4696  Non0_F1_score: 0.3001  Mult_acc_5: 0.4665  Mult_acc_7: 0.4665  MAE: 0.6025  Corr: 0.0396 
+2025-09-05 20:10:05,626 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.8599 
+2025-09-05 20:10:05,630 - MMSA [INFO] - M: >>  Has0_acc_2: 0.7991  Has0_F1_score: 0.8010  Non0_acc_2: 0.8380  Non0_F1_score: 0.8389  Mult_acc_5: 0.4148  Mult_acc_7: 0.3362  MAE: 0.8720  Corr: 0.7330 
+2025-09-05 20:10:12,996 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8769  Has0_F1_score: 0.8774  Non0_acc_2: 0.8985  Non0_F1_score: 0.8986  Mult_acc_5: 0.4735  Mult_acc_7: 0.4408  MAE: 0.6578  Corr: 0.8248 
+2025-09-05 20:10:12,999 - MMSA [INFO] - T: >>  Has0_acc_2: 0.5218  Has0_F1_score: 0.3578  Non0_acc_2: 0.5218  Non0_F1_score: 0.3578  Mult_acc_5: 0.3372  Mult_acc_7: 0.3372  MAE: 0.7358  Corr: 0.6671 
+2025-09-05 20:10:13,003 - MMSA [INFO] - A: >>  Has0_acc_2: 0.5249  Has0_F1_score: 0.3614  Non0_acc_2: 0.5249  Non0_F1_score: 0.3614  Mult_acc_5: 0.5537  Mult_acc_7: 0.5537  MAE: 0.5268  Corr: 0.1122 
+2025-09-05 20:10:13,008 - MMSA [INFO] - V: >>  Has0_acc_2: 0.5086  Has0_F1_score: 0.3429  Non0_acc_2: 0.5086  Non0_F1_score: 0.3429  Mult_acc_5: 0.5818  Mult_acc_7: 0.5818  MAE: 0.4907  Corr: 0.0637 
+2025-09-05 20:10:13,567 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.8550 
+2025-09-05 20:10:13,571 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8122  Has0_F1_score: 0.8139  Non0_acc_2: 0.8519  Non0_F1_score: 0.8522  Mult_acc_5: 0.4367  Mult_acc_7: 0.3624  MAE: 0.8477  Corr: 0.7494 
+2025-09-05 20:10:21,208 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8832  Has0_F1_score: 0.8837  Non0_acc_2: 0.9074  Non0_F1_score: 0.9076  Mult_acc_5: 0.4938  Mult_acc_7: 0.4673  MAE: 0.6081  Corr: 0.8565 
+2025-09-05 20:10:21,212 - MMSA [INFO] - T: >>  Has0_acc_2: 0.4759  Has0_F1_score: 0.3112  Non0_acc_2: 0.4759  Non0_F1_score: 0.3112  Mult_acc_5: 0.4268  Mult_acc_7: 0.4268  MAE: 0.6671  Corr: 0.6915 
+2025-09-05 20:10:21,217 - MMSA [INFO] - A: >>  Has0_acc_2: 0.4260  Has0_F1_score: 0.2545  Non0_acc_2: 0.4260  Non0_F1_score: 0.2545  Mult_acc_5: 0.6246  Mult_acc_7: 0.6246  MAE: 0.4964  Corr: 0.1414 
+2025-09-05 20:10:21,221 - MMSA [INFO] - V: >>  Has0_acc_2: 0.6184  Has0_F1_score: 0.4726  Non0_acc_2: 0.6184  Non0_F1_score: 0.4726  Mult_acc_5: 0.6355  Mult_acc_7: 0.6355  MAE: 0.4289  Corr: 0.1092 
+2025-09-05 20:10:21,796 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.8302 
+2025-09-05 20:10:21,800 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8297  Has0_F1_score: 0.8306  Non0_acc_2: 0.8611  Non0_F1_score: 0.8609  Mult_acc_5: 0.4410  Mult_acc_7: 0.3624  MAE: 0.8129  Corr: 0.7621 
+2025-09-05 20:10:36,056 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8980  Has0_F1_score: 0.8985  Non0_acc_2: 0.9180  Non0_F1_score: 0.9182  Mult_acc_5: 0.5405  Mult_acc_7: 0.5062  MAE: 0.5392  Corr: 0.8814 
+2025-09-05 20:10:36,060 - MMSA [INFO] - T: >>  Has0_acc_2: 0.5249  Has0_F1_score: 0.4685  Non0_acc_2: 0.5249  Non0_F1_score: 0.4685  Mult_acc_5: 0.4595  Mult_acc_7: 0.4595  MAE: 0.6495  Corr: 0.6223 
+2025-09-05 20:10:36,064 - MMSA [INFO] - A: >>  Has0_acc_2: 0.3240  Has0_F1_score: 0.1586  Non0_acc_2: 0.3240  Non0_F1_score: 0.1586  Mult_acc_5: 0.6160  Mult_acc_7: 0.6160  MAE: 0.5200  Corr: 0.1134 
+2025-09-05 20:10:36,068 - MMSA [INFO] - V: >>  Has0_acc_2: 0.7282  Has0_F1_score: 0.6137  Non0_acc_2: 0.7282  Non0_F1_score: 0.6137  Mult_acc_5: 0.6121  Mult_acc_7: 0.6121  MAE: 0.4374  Corr: 0.1191 
+2025-09-05 20:10:36,628 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.8396 
+2025-09-05 20:10:36,632 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8079  Has0_F1_score: 0.8096  Non0_acc_2: 0.8426  Non0_F1_score: 0.8431  Mult_acc_5: 0.4148  Mult_acc_7: 0.3362  MAE: 0.8108  Corr: 0.7653 
+2025-09-05 20:10:42,111 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9174  Has0_F1_score: 0.9178  Non0_acc_2: 0.9383  Non0_F1_score: 0.9384  Mult_acc_5: 0.5755  Mult_acc_7: 0.5389  MAE: 0.4889  Corr: 0.9032 
+2025-09-05 20:10:42,115 - MMSA [INFO] - T: >>  Has0_acc_2: 0.6900  Has0_F1_score: 0.6888  Non0_acc_2: 0.6900  Non0_F1_score: 0.6888  Mult_acc_5: 0.4486  Mult_acc_7: 0.4486  MAE: 0.6360  Corr: 0.6388 
+2025-09-05 20:10:42,118 - MMSA [INFO] - A: >>  Has0_acc_2: 0.2960  Has0_F1_score: 0.1352  Non0_acc_2: 0.2960  Non0_F1_score: 0.1352  Mult_acc_5: 0.6028  Mult_acc_7: 0.6028  MAE: 0.5354  Corr: 0.0890 
+2025-09-05 20:10:42,122 - MMSA [INFO] - V: >>  Has0_acc_2: 0.7500  Has0_F1_score: 0.6429  Non0_acc_2: 0.7500  Non0_F1_score: 0.6429  Mult_acc_5: 0.5872  Mult_acc_7: 0.5872  MAE: 0.4573  Corr: 0.0672 
+2025-09-05 20:10:42,682 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.7884 
+2025-09-05 20:10:42,685 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8035  Has0_F1_score: 0.8053  Non0_acc_2: 0.8380  Non0_F1_score: 0.8386  Mult_acc_5: 0.4891  Mult_acc_7: 0.3799  MAE: 0.7929  Corr: 0.7769 
+2025-09-05 20:10:51,003 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9167  Has0_F1_score: 0.9169  Non0_acc_2: 0.9358  Non0_F1_score: 0.9359  Mult_acc_5: 0.6332  Mult_acc_7: 0.5872  MAE: 0.4392  Corr: 0.9176 
+2025-09-05 20:10:51,006 - MMSA [INFO] - T: >>  Has0_acc_2: 0.7196  Has0_F1_score: 0.7267  Non0_acc_2: 0.7196  Non0_F1_score: 0.7267  Mult_acc_5: 0.3879  Mult_acc_7: 0.3879  MAE: 0.6689  Corr: 0.6742 
+2025-09-05 20:10:51,010 - MMSA [INFO] - A: >>  Has0_acc_2: 0.2687  Has0_F1_score: 0.1138  Non0_acc_2: 0.2687  Non0_F1_score: 0.1138  Mult_acc_5: 0.5724  Mult_acc_7: 0.5724  MAE: 0.5599  Corr: 0.1367 
+2025-09-05 20:10:43,150 - MMSA [INFO] - V: >>  Has0_acc_2: 0.7788  Has0_F1_score: 0.6820  Non0_acc_2: 0.7788  Non0_F1_score: 0.6820  Mult_acc_5: 0.5576  Mult_acc_7: 0.5576  MAE: 0.4839  Corr: 0.0937 
+2025-09-05 20:10:43,754 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.7982 
+2025-09-05 20:10:43,759 - MMSA [INFO] - M: >>  Has0_acc_2: 0.7991  Has0_F1_score: 0.8010  Non0_acc_2: 0.8333  Non0_F1_score: 0.8340  Mult_acc_5: 0.5153  Mult_acc_7: 0.3974  MAE: 0.7873  Corr: 0.7817 
+2025-09-05 20:10:49,229 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9322  Has0_F1_score: 0.9325  Non0_acc_2: 0.9513  Non0_F1_score: 0.9513  Mult_acc_5: 0.6869  Mult_acc_7: 0.6394  MAE: 0.3934  Corr: 0.9308 
+2025-09-05 20:10:49,233 - MMSA [INFO] - T: >>  Has0_acc_2: 0.7632  Has0_F1_score: 0.7703  Non0_acc_2: 0.7632  Non0_F1_score: 0.7703  Mult_acc_5: 0.3512  Mult_acc_7: 0.3512  MAE: 0.7022  Corr: 0.7031 
+2025-09-05 20:10:49,237 - MMSA [INFO] - A: >>  Has0_acc_2: 0.2477  Has0_F1_score: 0.0983  Non0_acc_2: 0.2477  Non0_F1_score: 0.0983  Mult_acc_5: 0.5498  Mult_acc_7: 0.5498  MAE: 0.5820  Corr: 0.0973 
+2025-09-05 20:10:49,242 - MMSA [INFO] - V: >>  Has0_acc_2: 0.8014  Has0_F1_score: 0.7131  Non0_acc_2: 0.8014  Non0_F1_score: 0.7131  Mult_acc_5: 0.5296  Mult_acc_7: 0.5296  MAE: 0.5098  Corr: 0.0390 
+2025-09-05 20:10:55,729 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.7472 
+2025-09-05 20:10:55,733 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8122  Has0_F1_score: 0.8132  Non0_acc_2: 0.8426  Non0_F1_score: 0.8424  Mult_acc_5: 0.5153  Mult_acc_7: 0.4017  MAE: 0.7565  Corr: 0.7888 
+2025-09-05 20:11:03,440 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9276  Has0_F1_score: 0.9278  Non0_acc_2: 0.9513  Non0_F1_score: 0.9513  Mult_acc_5: 0.7329  Mult_acc_7: 0.6822  MAE: 0.3507  Corr: 0.9448 
+2025-09-05 20:11:03,444 - MMSA [INFO] - T: >>  Has0_acc_2: 0.7960  Has0_F1_score: 0.8029  Non0_acc_2: 0.7960  Non0_F1_score: 0.8029  Mult_acc_5: 0.3271  Mult_acc_7: 0.3271  MAE: 0.7236  Corr: 0.7001 
+2025-09-05 20:11:03,449 - MMSA [INFO] - A: >>  Has0_acc_2: 0.2274  Has0_F1_score: 0.0843  Non0_acc_2: 0.2274  Non0_F1_score: 0.0843  Mult_acc_5: 0.5335  Mult_acc_7: 0.5335  MAE: 0.6053  Corr: 0.1116 
+2025-09-05 20:11:03,454 - MMSA [INFO] - V: >>  Has0_acc_2: 0.8193  Has0_F1_score: 0.7379  Non0_acc_2: 0.8193  Non0_F1_score: 0.7379  Mult_acc_5: 0.5125  Mult_acc_7: 0.5125  MAE: 0.5368  Corr: 0.0147 
+2025-09-05 20:11:04,080 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.7624 
+2025-09-05 20:11:04,084 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8079  Has0_F1_score: 0.8090  Non0_acc_2: 0.8380  Non0_F1_score: 0.8378  Mult_acc_5: 0.5240  Mult_acc_7: 0.4061  MAE: 0.7512  Corr: 0.7889 
+2025-09-05 20:11:09,772 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9361  Has0_F1_score: 0.9363  Non0_acc_2: 0.9537  Non0_F1_score: 0.9537  Mult_acc_5: 0.7399  Mult_acc_7: 0.6869  MAE: 0.3207  Corr: 0.9539 
+2025-09-05 20:11:09,776 - MMSA [INFO] - T: >>  Has0_acc_2: 0.8520  Has0_F1_score: 0.8549  Non0_acc_2: 0.8520  Non0_F1_score: 0.8549  Mult_acc_5: 0.3069  Mult_acc_7: 0.3069  MAE: 0.7332  Corr: 0.7211 
+2025-09-05 20:11:09,780 - MMSA [INFO] - A: >>  Has0_acc_2: 0.2157  Has0_F1_score: 0.0766  Non0_acc_2: 0.2157  Non0_F1_score: 0.0766  Mult_acc_5: 0.5202  Mult_acc_7: 0.5202  MAE: 0.6221  Corr: 0.0720 
+2025-09-05 20:11:09,783 - MMSA [INFO] - V: >>  Has0_acc_2: 0.8380  Has0_F1_score: 0.7641  Non0_acc_2: 0.8380  Non0_F1_score: 0.7641  Mult_acc_5: 0.5039  Mult_acc_7: 0.5039  MAE: 0.5535  Corr: -0.0119 
+2025-09-05 20:11:10,369 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.7285 
+2025-09-05 20:11:10,373 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8035  Has0_F1_score: 0.8049  Non0_acc_2: 0.8333  Non0_F1_score: 0.8336  Mult_acc_5: 0.5328  Mult_acc_7: 0.4192  MAE: 0.7386  Corr: 0.7909 
+2025-09-05 20:11:10,461 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9424  Has0_F1_score: 0.9425  Non0_acc_2: 0.9602  Non0_F1_score: 0.9602  Mult_acc_5: 0.7531  Mult_acc_7: 0.6994  MAE: 0.2985  Corr: 0.9595 
+2025-09-05 20:11:10,467 - MMSA [INFO] - T: >>  Has0_acc_2: 0.8785  Has0_F1_score: 0.8800  Non0_acc_2: 0.8785  Non0_F1_score: 0.8800  Mult_acc_5: 0.3092  Mult_acc_7: 0.3092  MAE: 0.7382  Corr: 0.7348 
+2025-09-05 20:11:10,471 - MMSA [INFO] - A: >>  Has0_acc_2: 0.2788  Has0_F1_score: 0.2081  Non0_acc_2: 0.2788  Non0_F1_score: 0.2081  Mult_acc_5: 0.5101  Mult_acc_7: 0.5101  MAE: 0.6281  Corr: 0.1373 
+2025-09-05 20:11:10,475 - MMSA [INFO] - V: >>  Has0_acc_2: 0.8450  Has0_F1_score: 0.7740  Non0_acc_2: 0.8450  Non0_F1_score: 0.7740  Mult_acc_5: 0.4914  Mult_acc_7: 0.4914  MAE: 0.5553  Corr: 0.0451 
+2025-09-05 20:11:11,145 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.7201 
+2025-09-05 20:11:11,150 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8253  Has0_F1_score: 0.8253  Non0_acc_2: 0.8565  Non0_F1_score: 0.8553  Mult_acc_5: 0.5502  Mult_acc_7: 0.4410  MAE: 0.7241  Corr: 0.7960 
+2025-09-05 20:11:25,813 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9447  Has0_F1_score: 0.9448  Non0_acc_2: 0.9651  Non0_F1_score: 0.9650  Mult_acc_5: 0.7835  Mult_acc_7: 0.7305  MAE: 0.2879  Corr: 0.9631 
+2025-09-05 20:11:25,818 - MMSA [INFO] - T: >>  Has0_acc_2: 0.9221  Has0_F1_score: 0.9219  Non0_acc_2: 0.9221  Non0_F1_score: 0.9219  Mult_acc_5: 0.3131  Mult_acc_7: 0.3131  MAE: 0.7170  Corr: 0.7484 
+2025-09-05 20:11:25,823 - MMSA [INFO] - A: >>  Has0_acc_2: 0.7422  Has0_F1_score: 0.7345  Non0_acc_2: 0.7422  Non0_F1_score: 0.7345  Mult_acc_5: 0.4961  Mult_acc_7: 0.4961  MAE: 0.6321  Corr: 0.1504 
+2025-09-05 20:11:25,827 - MMSA [INFO] - V: >>  Has0_acc_2: 0.8536  Has0_F1_score: 0.7862  Non0_acc_2: 0.8536  Non0_F1_score: 0.7862  Mult_acc_5: 0.4914  Mult_acc_7: 0.4914  MAE: 0.5569  Corr: 0.0097 
+2025-09-05 20:11:26,435 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.7158 
+2025-09-05 20:11:26,439 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8210  Has0_F1_score: 0.8211  Non0_acc_2: 0.8472  Non0_F1_score: 0.8463  Mult_acc_5: 0.5328  Mult_acc_7: 0.4236  MAE: 0.7159  Corr: 0.8017 
+2025-09-05 20:11:34,999 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9502  Has0_F1_score: 0.9503  Non0_acc_2: 0.9659  Non0_F1_score: 0.9659  Mult_acc_5: 0.7928  Mult_acc_7: 0.7391  MAE: 0.2799  Corr: 0.9655 
+2025-09-05 20:11:35,004 - MMSA [INFO] - T: >>  Has0_acc_2: 0.9393  Has0_F1_score: 0.9386  Non0_acc_2: 0.9393  Non0_F1_score: 0.9386  Mult_acc_5: 0.3170  Mult_acc_7: 0.3170  MAE: 0.6791  Corr: 0.7654 
+2025-09-05 20:11:35,011 - MMSA [INFO] - A: >>  Has0_acc_2: 0.7874  Has0_F1_score: 0.6937  Non0_acc_2: 0.7874  Non0_F1_score: 0.6937  Mult_acc_5: 0.4907  Mult_acc_7: 0.4907  MAE: 0.6356  Corr: 0.1413 
+2025-09-05 20:11:35,016 - MMSA [INFO] - V: >>  Has0_acc_2: 0.8606  Has0_F1_score: 0.7961  Non0_acc_2: 0.8606  Non0_F1_score: 0.7961  Mult_acc_5: 0.4945  Mult_acc_7: 0.4945  MAE: 0.5597  Corr: -0.0360 
+2025-09-05 20:11:35,626 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.6917 
+2025-09-05 20:11:35,630 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8253  Has0_F1_score: 0.8256  Non0_acc_2: 0.8472  Non0_F1_score: 0.8466  Mult_acc_5: 0.5546  Mult_acc_7: 0.4410  MAE: 0.7076  Corr: 0.8049 
+2025-09-05 20:11:35,879 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9494  Has0_F1_score: 0.9495  Non0_acc_2: 0.9683  Non0_F1_score: 0.9683  Mult_acc_5: 0.8045  Mult_acc_7: 0.7508  MAE: 0.2598  Corr: 0.9701 
+2025-09-05 20:11:35,885 - MMSA [INFO] - T: >>  Has0_acc_2: 0.9447  Has0_F1_score: 0.9441  Non0_acc_2: 0.9447  Non0_F1_score: 0.9441  Mult_acc_5: 0.4019  Mult_acc_7: 0.4019  MAE: 0.6321  Corr: 0.7815 
+2025-09-05 20:11:35,889 - MMSA [INFO] - A: >>  Has0_acc_2: 0.7936  Has0_F1_score: 0.7023  Non0_acc_2: 0.7936  Non0_F1_score: 0.7023  Mult_acc_5: 0.4852  Mult_acc_7: 0.4852  MAE: 0.6378  Corr: 0.1847 
+2025-09-05 20:11:35,896 - MMSA [INFO] - V: >>  Has0_acc_2: 0.8614  Has0_F1_score: 0.7972  Non0_acc_2: 0.8614  Non0_F1_score: 0.7972  Mult_acc_5: 0.4953  Mult_acc_7: 0.4953  MAE: 0.5584  Corr: 0.0006 
+2025-09-05 20:11:36,510 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.6980 
+2025-09-05 20:11:36,514 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8210  Has0_F1_score: 0.8217  Non0_acc_2: 0.8472  Non0_F1_score: 0.8469  Mult_acc_5: 0.5633  Mult_acc_7: 0.4498  MAE: 0.6998  Corr: 0.8069 
+2025-09-05 20:11:41,778 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9502  Has0_F1_score: 0.9502  Non0_acc_2: 0.9699  Non0_F1_score: 0.9699  Mult_acc_5: 0.8092  Mult_acc_7: 0.7555  MAE: 0.2514  Corr: 0.9725 
+2025-09-05 20:11:41,782 - MMSA [INFO] - T: >>  Has0_acc_2: 0.9502  Has0_F1_score: 0.9492  Non0_acc_2: 0.9502  Non0_F1_score: 0.9492  Mult_acc_5: 0.5366  Mult_acc_7: 0.5366  MAE: 0.5707  Corr: 0.7974 
+2025-09-05 20:11:41,786 - MMSA [INFO] - A: >>  Has0_acc_2: 0.7944  Has0_F1_score: 0.7034  Non0_acc_2: 0.7944  Non0_F1_score: 0.7034  Mult_acc_5: 0.4743  Mult_acc_7: 0.4743  MAE: 0.6401  Corr: 0.2137 
+2025-09-05 20:11:41,790 - MMSA [INFO] - V: >>  Has0_acc_2: 0.8660  Has0_F1_score: 0.8039  Non0_acc_2: 0.8660  Non0_F1_score: 0.8039  Mult_acc_5: 0.5039  Mult_acc_7: 0.5039  MAE: 0.5544  Corr: -0.0004 
+2025-09-05 20:11:42,410 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.7183 
+2025-09-05 20:11:42,414 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8384  Has0_F1_score: 0.8380  Non0_acc_2: 0.8611  Non0_F1_score: 0.8598  Mult_acc_5: 0.5459  Mult_acc_7: 0.4367  MAE: 0.7077  Corr: 0.8070 
+2025-09-05 20:11:47,315 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9517  Has0_F1_score: 0.9518  Non0_acc_2: 0.9651  Non0_F1_score: 0.9651  Mult_acc_5: 0.8115  Mult_acc_7: 0.7578  MAE: 0.2500  Corr: 0.9742 
+2025-09-05 20:11:47,319 - MMSA [INFO] - T: >>  Has0_acc_2: 0.9634  Has0_F1_score: 0.9626  Non0_acc_2: 0.9634  Non0_F1_score: 0.9626  Mult_acc_5: 0.5319  Mult_acc_7: 0.5319  MAE: 0.5299  Corr: 0.8132 
+2025-09-05 20:11:47,323 - MMSA [INFO] - A: >>  Has0_acc_2: 0.7983  Has0_F1_score: 0.7087  Non0_acc_2: 0.7983  Non0_F1_score: 0.7087  Mult_acc_5: 0.4673  Mult_acc_7: 0.4673  MAE: 0.6424  Corr: 0.2256 
+2025-09-05 20:11:47,328 - MMSA [INFO] - V: >>  Has0_acc_2: 0.8653  Has0_F1_score: 0.8028  Non0_acc_2: 0.8653  Non0_F1_score: 0.8028  Mult_acc_5: 0.5062  Mult_acc_7: 0.5062  MAE: 0.5548  Corr: 0.0120 
+2025-09-05 20:11:48,001 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.7035 
+2025-09-05 20:11:48,005 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8515  Has0_F1_score: 0.8506  Non0_acc_2: 0.8657  Non0_F1_score: 0.8643  Mult_acc_5: 0.5328  Mult_acc_7: 0.4236  MAE: 0.7105  Corr: 0.8047 
+2025-09-05 20:11:53,430 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9579  Has0_F1_score: 0.9580  Non0_acc_2: 0.9724  Non0_F1_score: 0.9723  Mult_acc_5: 0.8030  Mult_acc_7: 0.7492  MAE: 0.2405  Corr: 0.9761 
+2025-09-05 20:11:53,434 - MMSA [INFO] - T: >>  Has0_acc_2: 0.9642  Has0_F1_score: 0.9635  Non0_acc_2: 0.9642  Non0_F1_score: 0.9635  Mult_acc_5: 0.5086  Mult_acc_7: 0.5086  MAE: 0.5340  Corr: 0.8221 
+2025-09-05 20:11:53,438 - MMSA [INFO] - A: >>  Has0_acc_2: 0.7975  Has0_F1_score: 0.7077  Non0_acc_2: 0.7975  Non0_F1_score: 0.7077  Mult_acc_5: 0.4587  Mult_acc_7: 0.4587  MAE: 0.6418  Corr: 0.2291 
+2025-09-05 20:11:53,445 - MMSA [INFO] - V: >>  Has0_acc_2: 0.8692  Has0_F1_score: 0.8083  Non0_acc_2: 0.8692  Non0_F1_score: 0.8083  Mult_acc_5: 0.5039  Mult_acc_7: 0.5039  MAE: 0.5562  Corr: 0.0133 
+2025-09-05 20:11:54,073 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.6981 
+2025-09-05 20:11:54,077 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8384  Has0_F1_score: 0.8380  Non0_acc_2: 0.8611  Non0_F1_score: 0.8598  Mult_acc_5: 0.5546  Mult_acc_7: 0.4410  MAE: 0.6968  Corr: 0.8059 
+2025-09-05 20:12:06,069 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9673  Has0_F1_score: 0.9673  Non0_acc_2: 0.9813  Non0_F1_score: 0.9813  Mult_acc_5: 0.8287  Mult_acc_7: 0.7749  MAE: 0.2160  Corr: 0.9799 
+2025-09-05 20:12:06,073 - MMSA [INFO] - T: >>  Has0_acc_2: 0.9727  Has0_F1_score: 0.9723  Non0_acc_2: 0.9727  Non0_F1_score: 0.9723  Mult_acc_5: 0.5335  Mult_acc_7: 0.5327  MAE: 0.5472  Corr: 0.8364 
+2025-09-05 20:12:06,077 - MMSA [INFO] - A: >>  Has0_acc_2: 0.8006  Has0_F1_score: 0.7120  Non0_acc_2: 0.8006  Non0_F1_score: 0.7120  Mult_acc_5: 0.4502  Mult_acc_7: 0.4502  MAE: 0.6378  Corr: 0.2271 
+2025-09-05 20:12:06,082 - MMSA [INFO] - V: >>  Has0_acc_2: 0.8660  Has0_F1_score: 0.8039  Non0_acc_2: 0.8660  Non0_F1_score: 0.8039  Mult_acc_5: 0.4992  Mult_acc_7: 0.4992  MAE: 0.5605  Corr: 0.0047 
+2025-09-05 20:12:06,685 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.7175 
+2025-09-05 20:12:06,689 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8122  Has0_F1_score: 0.8130  Non0_acc_2: 0.8426  Non0_F1_score: 0.8421  Mult_acc_5: 0.5240  Mult_acc_7: 0.4105  MAE: 0.7035  Corr: 0.8054 
+2025-09-05 20:12:12,085 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9540  Has0_F1_score: 0.9542  Non0_acc_2: 0.9773  Non0_F1_score: 0.9773  Mult_acc_5: 0.8240  Mult_acc_7: 0.7702  MAE: 0.2112  Corr: 0.9810 
+2025-09-05 20:12:12,089 - MMSA [INFO] - T: >>  Has0_acc_2: 0.9696  Has0_F1_score: 0.9689  Non0_acc_2: 0.9696  Non0_F1_score: 0.9689  Mult_acc_5: 0.5234  Mult_acc_7: 0.5226  MAE: 0.5499  Corr: 0.8513 
+2025-09-05 20:12:12,093 - MMSA [INFO] - A: >>  Has0_acc_2: 0.8030  Has0_F1_score: 0.7152  Non0_acc_2: 0.8030  Non0_F1_score: 0.7152  Mult_acc_5: 0.4408  Mult_acc_7: 0.4408  MAE: 0.6344  Corr: 0.2505 
+2025-09-05 20:12:12,098 - MMSA [INFO] - V: >>  Has0_acc_2: 0.8575  Has0_F1_score: 0.7917  Non0_acc_2: 0.8575  Non0_F1_score: 0.7917  Mult_acc_5: 0.4907  Mult_acc_7: 0.4907  MAE: 0.5722  Corr: 0.0377 
+2025-09-05 20:12:12,715 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.7153 
+2025-09-05 20:12:12,719 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8122  Has0_F1_score: 0.8137  Non0_acc_2: 0.8426  Non0_F1_score: 0.8430  Mult_acc_5: 0.5415  Mult_acc_7: 0.4279  MAE: 0.7045  Corr: 0.8080 
+2025-09-05 20:12:10,326 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9673  Has0_F1_score: 0.9674  Non0_acc_2: 0.9854  Non0_F1_score: 0.9854  Mult_acc_5: 0.8419  Mult_acc_7: 0.7882  MAE: 0.2176  Corr: 0.9806 
+2025-09-05 20:12:10,330 - MMSA [INFO] - T: >>  Has0_acc_2: 0.9704  Has0_F1_score: 0.9697  Non0_acc_2: 0.9704  Non0_F1_score: 0.9697  Mult_acc_5: 0.5475  Mult_acc_7: 0.5467  MAE: 0.5471  Corr: 0.8622 
+2025-09-05 20:12:10,333 - MMSA [INFO] - A: >>  Has0_acc_2: 0.8006  Has0_F1_score: 0.7120  Non0_acc_2: 0.8006  Non0_F1_score: 0.7120  Mult_acc_5: 0.4315  Mult_acc_7: 0.4315  MAE: 0.6360  Corr: 0.2603 
+2025-09-05 20:12:10,338 - MMSA [INFO] - V: >>  Has0_acc_2: 0.8505  Has0_F1_score: 0.7817  Non0_acc_2: 0.8505  Non0_F1_score: 0.7817  Mult_acc_5: 0.4813  Mult_acc_7: 0.4813  MAE: 0.5851  Corr: 0.0655 
+2025-09-05 20:12:10,940 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.6999 
+2025-09-05 20:12:10,943 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8166  Has0_F1_score: 0.8180  Non0_acc_2: 0.8426  Non0_F1_score: 0.8430  Mult_acc_5: 0.5371  Mult_acc_7: 0.4236  MAE: 0.6964  Corr: 0.8083 
+2025-09-05 20:12:22,387 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9509  Has0_F1_score: 0.9511  Non0_acc_2: 0.9756  Non0_F1_score: 0.9756  Mult_acc_5: 0.8364  Mult_acc_7: 0.7819  MAE: 0.2067  Corr: 0.9829 
+2025-09-05 20:12:22,391 - MMSA [INFO] - T: >>  Has0_acc_2: 0.9673  Has0_F1_score: 0.9667  Non0_acc_2: 0.9673  Non0_F1_score: 0.9667  Mult_acc_5: 0.5444  Mult_acc_7: 0.5436  MAE: 0.5580  Corr: 0.8598 
+2025-09-05 20:12:22,395 - MMSA [INFO] - A: >>  Has0_acc_2: 0.7998  Has0_F1_score: 0.7109  Non0_acc_2: 0.7998  Non0_F1_score: 0.7109  Mult_acc_5: 0.4283  Mult_acc_7: 0.4283  MAE: 0.6356  Corr: 0.2522 
+2025-09-05 20:12:22,399 - MMSA [INFO] - V: >>  Has0_acc_2: 0.8520  Has0_F1_score: 0.7839  Non0_acc_2: 0.8520  Non0_F1_score: 0.7839  Mult_acc_5: 0.4618  Mult_acc_7: 0.4618  MAE: 0.5975  Corr: 0.0814 
+2025-09-05 20:12:22,997 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.6927 
+2025-09-05 20:12:23,001 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8210  Has0_F1_score: 0.8219  Non0_acc_2: 0.8472  Non0_F1_score: 0.8471  Mult_acc_5: 0.5502  Mult_acc_7: 0.4367  MAE: 0.6926  Corr: 0.8094 
+2025-09-05 20:12:26,176 - MMSA [INFO] - TEST-(tetfn_crt) >> loss: 0.7710 
+2025-09-05 20:12:26,180 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8090  Has0_F1_score: 0.8092  Non0_acc_2: 0.8216  Non0_F1_score: 0.8224  Mult_acc_5: 0.5058  Mult_acc_7: 0.4359  MAE: 0.7725  Corr: 0.7783 
+2025-09-05 20:12:27,418 - MMSA [INFO] - Result for seed 1111: {'Has0_acc_2': 0.809, 'Has0_F1_score': 0.8092, 'Non0_acc_2': 0.8216, 'Non0_F1_score': 0.8224, 'Mult_acc_5': np.float64(0.5058), 'Mult_acc_7': np.float64(0.4359), 'MAE': np.float64(0.7725), 'Corr': np.float64(0.7783), 'Loss': 0.771}
+2025-09-05 20:12:27,435 - MMSA [INFO] - Results saved to results/normal/mosi.csv.
+2025-09-05 20:14:54,996 - MMSA [INFO] - ======================================== Program Start ========================================
+2025-09-05 20:14:55,063 - MMSA [INFO] - Running with args:
+2025-09-05 20:14:55,063 - MMSA [INFO] - {'model_name': 'tetfn_crt', 'dataset_name': 'mosi', 'featurePath': 'data/MOSI/Processed/aligned_50.pkl', 'seq_lens': [50, 50, 50], 'feature_dims': [768, 5, 20], 'train_samples': 1284, 'num_classes': 3, 'language': 'en', 'KeyEval': 'Loss', 'missing_rate': [0.2, 0.2, 0.2], 'missing_seed': [1111, 1111, 1111], 'need_data_aligned': True, 'need_model_aligned': True, 'need_normalized': False, 'use_bert': True, 'use_finetune': True, 'save_labels': False, 'early_stop': 8, 'update_epochs': 4, 'batch_size': 64, 'transformers': 'bert', 'pretrained': 'bert-base-uncased', 'a_lstm_hidden_size': 16, 'a_lstm_layers': 1, 'a_lstm_dropout': 0.0, 'v_lstm_hidden_size': 64, 'v_lstm_layers': 1, 'v_lstm_dropout': 0.0, 'conv1d_kernel_size_l': 1, 'conv1d_kernel_size_a': 1, 'conv1d_kernel_size_v': 3, 'dst_feature_dims': 50, 'nheads': 5, 'attn_dropout': 0.1, 'attn_dropout_a': 0.0, 'attn_dropout_v': 0.1, 'relu_dropout': 0.0, 'embed_dropout': 0.0, 'res_dropout': 0.1, 'post_fusion_dropout': 0.0, 'post_fusion_dim': 64, 'post_text_dropout': 0.0, 'post_text_dim': 32, 'post_audio_dropout': 0.0, 'post_audio_dim': 32, 'post_video_dropout': 0.0, 'post_video_dim': 16, 'excludeZero': True, 'H': 3, 'decay': False, 'weight_decay_bert': 0.001, 'learning_rate_bert': 3e-05, 'weight_decay_audio': 0.01, 'use_info_bottleneck': True, 'use_text_debias': True, 'bottleneck_dim': 25, 'info_bottleneck_beta': 0.001, 'info_bottleneck_dropout': 0.1, 'debias_model_dim': 128, 'debias_num_heads': 8, 'debias_num_layers': 2, 'debias_dropout': 0.1, 'debias_confounder_size': 50, 'use_kmeans_init': False, 'info_bottleneck_weight': 0.1, 'weight_decay_video': 0.0, 'weight_decay_other': 0.01, 'learning_rate_audio': 0.0005, 'learning_rate_video': 0.0003, 'learning_rate_other': 0.0003, 'model_save_path': PosixPath('save_models/tetfn_crt-mosi.pth'), 'device': device(type='cuda', index=0), 'train_mode': 'regression', 'custom_feature': None, 'feature_T': None, 'feature_A': None, 'feature_V': None}
+2025-09-05 20:14:55,064 - MMSA [INFO] - Seeds: [1111]
+2025-09-05 20:14:55,071 - MMSA [INFO] - ------------------------------ Running with seed 1111 [1/1] ------------------------------
+2025-09-05 20:14:49,033 - MMSA [INFO] - train samples: (1284,)
+2025-09-05 20:14:50,611 - MMSA [INFO] - valid samples: (229,)
+2025-09-05 20:14:52,339 - MMSA [INFO] - test samples: (686,)
+2025-09-05 20:14:54,913 - MMSA [INFO] - The model has 110905064 trainable parameters
+2025-09-05 20:14:54,918 - MMSA [INFO] - Init labels
+2025-09-05 20:14:55,097 - MMSA [INFO] - Start training
+2025-09-05 20:15:01,276 - MMSA [INFO] - M: >>  Has0_acc_2: 0.5506  Has0_F1_score: 0.5007  Non0_acc_2: 0.5410  Non0_F1_score: 0.4890  Mult_acc_5: 0.1931  Mult_acc_7: 0.1931  MAE: 1.3106  Corr: 0.1133 
+2025-09-05 20:15:01,281 - MMSA [INFO] - T: >>  Has0_acc_2: 0.5241  Has0_F1_score: 0.4455  Non0_acc_2: 0.5102  Non0_F1_score: 0.4289  Mult_acc_5: 0.1931  Mult_acc_7: 0.1931  MAE: 1.3296  Corr: -0.1067 
+2025-09-05 20:15:01,287 - MMSA [INFO] - A: >>  Has0_acc_2: 0.5701  Has0_F1_score: 0.4140  Non0_acc_2: 0.5516  Non0_F1_score: 0.3922  Mult_acc_5: 0.1931  Mult_acc_7: 0.1931  MAE: 1.3217  Corr: 0.0259 
+2025-09-05 20:15:01,292 - MMSA [INFO] - V: >>  Has0_acc_2: 0.4299  Has0_F1_score: 0.2585  Non0_acc_2: 0.4484  Non0_F1_score: 0.2777  Mult_acc_5: 0.1931  Mult_acc_7: 0.1931  MAE: 1.3415  Corr: 0.0436 
+2025-09-05 20:15:01,844 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 1.4028 
+2025-09-05 20:15:01,848 - MMSA [INFO] - M: >>  Has0_acc_2: 0.5983  Has0_F1_score: 0.4479  Non0_acc_2: 0.5741  Non0_F1_score: 0.4187  Mult_acc_5: 0.2402  Mult_acc_7: 0.2402  MAE: 1.3813  Corr: 0.3629 
+2025-09-05 20:15:10,379 - MMSA [INFO] - M: >>  Has0_acc_2: 0.6176  Has0_F1_score: 0.5297  Non0_acc_2: 0.6060  Non0_F1_score: 0.5156  Mult_acc_5: 0.2227  Mult_acc_7: 0.2227  MAE: 1.2266  Corr: 0.5013 
+2025-09-05 20:15:10,384 - MMSA [INFO] - T: >>  Has0_acc_2: 0.4883  Has0_F1_score: 0.4505  Non0_acc_2: 0.4736  Non0_F1_score: 0.4348  Mult_acc_5: 0.1931  Mult_acc_7: 0.1931  MAE: 1.3307  Corr: -0.1860 
+2025-09-05 20:15:10,389 - MMSA [INFO] - A: >>  Has0_acc_2: 0.5701  Has0_F1_score: 0.4140  Non0_acc_2: 0.5516  Non0_F1_score: 0.3922  Mult_acc_5: 0.1931  Mult_acc_7: 0.1931  MAE: 1.3219  Corr: 0.0651 
+2025-09-05 20:15:10,394 - MMSA [INFO] - V: >>  Has0_acc_2: 0.4299  Has0_F1_score: 0.2585  Non0_acc_2: 0.4484  Non0_F1_score: 0.2777  Mult_acc_5: 0.1931  Mult_acc_7: 0.1931  MAE: 1.3414  Corr: -0.0037 
+2025-09-05 20:15:10,957 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 1.2335 
+2025-09-05 20:15:10,961 - MMSA [INFO] - M: >>  Has0_acc_2: 0.6812  Has0_F1_score: 0.6667  Non0_acc_2: 0.6759  Non0_F1_score: 0.6603  Mult_acc_5: 0.2489  Mult_acc_7: 0.2489  MAE: 1.2350  Corr: 0.5719 
+2025-09-05 20:15:19,417 - MMSA [INFO] - M: >>  Has0_acc_2: 0.7632  Has0_F1_score: 0.7608  Non0_acc_2: 0.7725  Non0_F1_score: 0.7695  Mult_acc_5: 0.2445  Mult_acc_7: 0.2445  MAE: 1.0244  Corr: 0.6719 
+2025-09-05 20:15:19,422 - MMSA [INFO] - T: >>  Has0_acc_2: 0.4813  Has0_F1_score: 0.4120  Non0_acc_2: 0.4813  Non0_F1_score: 0.4120  Mult_acc_5: 0.2625  Mult_acc_7: 0.2625  MAE: 1.0235  Corr: -0.1206 
+2025-09-05 20:15:19,428 - MMSA [INFO] - A: >>  Has0_acc_2: 0.5600  Has0_F1_score: 0.4020  Non0_acc_2: 0.5600  Non0_F1_score: 0.4020  Mult_acc_5: 0.3310  Mult_acc_7: 0.3310  MAE: 0.9979  Corr: -0.0355 
+2025-09-05 20:15:19,433 - MMSA [INFO] - V: >>  Has0_acc_2: 0.4502  Has0_F1_score: 0.2795  Non0_acc_2: 0.4502  Non0_F1_score: 0.2795  Mult_acc_5: 0.3100  Mult_acc_7: 0.3100  MAE: 0.9169  Corr: 0.0125 
+2025-09-05 20:15:20,028 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 1.0339 
+2025-09-05 20:15:20,033 - MMSA [INFO] - M: >>  Has0_acc_2: 0.7773  Has0_F1_score: 0.7786  Non0_acc_2: 0.8102  Non0_F1_score: 0.8107  Mult_acc_5: 0.2795  Mult_acc_7: 0.2795  MAE: 1.0423  Corr: 0.6627 
+2025-09-05 20:20:46,864 - MMSA [INFO] - ======================================== Program Start ========================================
+2025-09-05 20:20:40,588 - MMSA [INFO] - Running with args:
+2025-09-05 20:20:40,589 - MMSA [INFO] - {'model_name': 'tetfn_crt', 'dataset_name': 'mosi', 'featurePath': 'data/MOSI/Processed/aligned_50.pkl', 'seq_lens': [50, 50, 50], 'feature_dims': [768, 5, 20], 'train_samples': 1284, 'num_classes': 3, 'language': 'en', 'KeyEval': 'Loss', 'missing_rate': [0.2, 0.2, 0.2], 'missing_seed': [1111, 1111, 1111], 'need_data_aligned': True, 'need_model_aligned': True, 'need_normalized': False, 'use_bert': True, 'use_finetune': True, 'save_labels': False, 'early_stop': 8, 'update_epochs': 4, 'batch_size': 64, 'transformers': 'bert', 'pretrained': 'bert-base-uncased', 'a_lstm_hidden_size': 16, 'a_lstm_layers': 1, 'a_lstm_dropout': 0.0, 'v_lstm_hidden_size': 64, 'v_lstm_layers': 1, 'v_lstm_dropout': 0.0, 'conv1d_kernel_size_l': 1, 'conv1d_kernel_size_a': 1, 'conv1d_kernel_size_v': 3, 'dst_feature_dims': 50, 'nheads': 5, 'attn_dropout': 0.1, 'attn_dropout_a': 0.0, 'attn_dropout_v': 0.1, 'relu_dropout': 0.0, 'embed_dropout': 0.0, 'res_dropout': 0.1, 'post_fusion_dropout': 0.0, 'post_fusion_dim': 64, 'post_text_dropout': 0.0, 'post_text_dim': 32, 'post_audio_dropout': 0.0, 'post_audio_dim': 32, 'post_video_dropout': 0.0, 'post_video_dim': 16, 'excludeZero': True, 'H': 3, 'decay': False, 'weight_decay_bert': 0.001, 'learning_rate_bert': 3e-05, 'weight_decay_audio': 0.01, 'use_info_bottleneck': True, 'use_text_debias': True, 'bottleneck_dim': 25, 'info_bottleneck_beta': 0.001, 'info_bottleneck_dropout': 0.1, 'debias_model_dim': 128, 'debias_num_heads': 8, 'debias_num_layers': 2, 'debias_dropout': 0.1, 'debias_confounder_size': 50, 'use_kmeans_init': False, 'info_bottleneck_weight': 0.1, 'weight_decay_video': 0.0, 'weight_decay_other': 0.01, 'learning_rate_audio': 0.0005, 'learning_rate_video': 0.0003, 'learning_rate_other': 0.0003, 'model_save_path': PosixPath('save_models/tetfn_crt-mosi.pth'), 'device': device(type='cuda', index=0), 'train_mode': 'regression', 'custom_feature': None, 'feature_T': None, 'feature_A': None, 'feature_V': None}
+2025-09-05 20:20:40,589 - MMSA [INFO] - Seeds: [1111]
+2025-09-05 20:20:40,595 - MMSA [INFO] - ------------------------------ Running with seed 1111 [1/1] ------------------------------
+2025-09-05 20:20:41,985 - MMSA [INFO] - train samples: (1284,)
+2025-09-05 20:20:43,369 - MMSA [INFO] - valid samples: (229,)
+2025-09-05 20:20:45,141 - MMSA [INFO] - test samples: (686,)
+2025-09-05 20:20:47,530 - MMSA [INFO] - The model has 110912636 trainable parameters
+2025-09-05 20:20:47,539 - MMSA [INFO] - Init labels
+2025-09-05 20:20:47,683 - MMSA [INFO] - Start training
+2025-09-05 20:20:53,313 - MMSA [INFO] - M: >>  Has0_acc_2: 0.5623  Has0_F1_score: 0.4369  Non0_acc_2: 0.5475  Non0_F1_score: 0.4181  Mult_acc_5: 0.1931  Mult_acc_7: 0.1931  MAE: 1.3050  Corr: 0.1396 
+2025-09-05 20:20:53,317 - MMSA [INFO] - T: >>  Has0_acc_2: 0.5701  Has0_F1_score: 0.4140  Non0_acc_2: 0.5516  Non0_F1_score: 0.3922  Mult_acc_5: 0.1931  Mult_acc_7: 0.1931  MAE: 1.3223  Corr: -0.0099 
+2025-09-05 20:20:53,322 - MMSA [INFO] - A: >>  Has0_acc_2: 0.5701  Has0_F1_score: 0.4140  Non0_acc_2: 0.5516  Non0_F1_score: 0.3922  Mult_acc_5: 0.1931  Mult_acc_7: 0.1931  MAE: 1.3183  Corr: -0.0610 
+2025-09-05 20:20:53,326 - MMSA [INFO] - V: >>  Has0_acc_2: 0.5701  Has0_F1_score: 0.4140  Non0_acc_2: 0.5516  Non0_F1_score: 0.3922  Mult_acc_5: 0.1931  Mult_acc_7: 0.1931  MAE: 1.3253  Corr: 0.0926 
+2025-09-05 20:20:53,861 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 1.3711 
+2025-09-05 20:20:53,865 - MMSA [INFO] - M: >>  Has0_acc_2: 0.6332  Has0_F1_score: 0.5534  Non0_acc_2: 0.6157  Non0_F1_score: 0.5331  Mult_acc_5: 0.2140  Mult_acc_7: 0.2140  MAE: 1.3740  Corr: 0.2990 
+2025-09-05 20:21:02,558 - MMSA [INFO] - M: >>  Has0_acc_2: 0.6495  Has0_F1_score: 0.6209  Non0_acc_2: 0.6491  Non0_F1_score: 0.6186  Mult_acc_5: 0.2196  Mult_acc_7: 0.2196  MAE: 1.2136  Corr: 0.4565 
+2025-09-05 20:21:02,563 - MMSA [INFO] - T: >>  Has0_acc_2: 0.5701  Has0_F1_score: 0.4140  Non0_acc_2: 0.5516  Non0_F1_score: 0.3922  Mult_acc_5: 0.1931  Mult_acc_7: 0.1931  MAE: 1.3221  Corr: 0.0022 
+2025-09-05 20:21:02,568 - MMSA [INFO] - A: >>  Has0_acc_2: 0.5701  Has0_F1_score: 0.4140  Non0_acc_2: 0.5516  Non0_F1_score: 0.3922  Mult_acc_5: 0.1931  Mult_acc_7: 0.1931  MAE: 1.3184  Corr: -0.0582 
+2025-09-05 20:21:02,572 - MMSA [INFO] - V: >>  Has0_acc_2: 0.5701  Has0_F1_score: 0.4140  Non0_acc_2: 0.5516  Non0_F1_score: 0.3922  Mult_acc_5: 0.1931  Mult_acc_7: 0.1931  MAE: 1.3252  Corr: 0.0865 
+2025-09-05 20:21:03,055 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 1.2572 
+2025-09-05 20:21:03,059 - MMSA [INFO] - M: >>  Has0_acc_2: 0.6856  Has0_F1_score: 0.6837  Non0_acc_2: 0.6991  Non0_F1_score: 0.6951  Mult_acc_5: 0.2402  Mult_acc_7: 0.2402  MAE: 1.2525  Corr: 0.4819 
+2025-09-05 20:21:16,760 - MMSA [INFO] - M: >>  Has0_acc_2: 0.7679  Has0_F1_score: 0.7677  Non0_acc_2: 0.7831  Non0_F1_score: 0.7822  Mult_acc_5: 0.2726  Mult_acc_7: 0.2726  MAE: 1.0193  Corr: 0.6384 
+2025-09-05 20:21:16,763 - MMSA [INFO] - T: >>  Has0_acc_2: 0.5506  Has0_F1_score: 0.3911  Non0_acc_2: 0.5506  Non0_F1_score: 0.3911  Mult_acc_5: 0.2547  Mult_acc_7: 0.2547  MAE: 1.1003  Corr: -0.0013 
+2025-09-05 20:21:16,767 - MMSA [INFO] - A: >>  Has0_acc_2: 0.5693  Has0_F1_score: 0.4131  Non0_acc_2: 0.5693  Non0_F1_score: 0.4131  Mult_acc_5: 0.3123  Mult_acc_7: 0.3123  MAE: 1.0254  Corr: -0.1159 
+2025-09-05 20:21:16,772 - MMSA [INFO] - V: >>  Has0_acc_2: 0.5818  Has0_F1_score: 0.4280  Non0_acc_2: 0.5818  Non0_F1_score: 0.4280  Mult_acc_5: 0.3100  Mult_acc_7: 0.3100  MAE: 1.0860  Corr: 0.0979 
+2025-09-05 20:21:10,854 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 1.0034 
+2025-09-05 20:21:10,858 - MMSA [INFO] - M: >>  Has0_acc_2: 0.7991  Has0_F1_score: 0.8011  Non0_acc_2: 0.8380  Non0_F1_score: 0.8388  Mult_acc_5: 0.2576  Mult_acc_7: 0.2576  MAE: 1.0087  Corr: 0.7027 
+2025-09-05 20:21:18,739 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8310  Has0_F1_score: 0.8318  Non0_acc_2: 0.8538  Non0_F1_score: 0.8541  Mult_acc_5: 0.3785  Mult_acc_7: 0.3637  MAE: 0.7686  Corr: 0.7660 
+2025-09-05 20:21:18,743 - MMSA [INFO] - T: >>  Has0_acc_2: 0.5506  Has0_F1_score: 0.3911  Non0_acc_2: 0.5506  Non0_F1_score: 0.3911  Mult_acc_5: 0.2882  Mult_acc_7: 0.2882  MAE: 0.9445  Corr: 0.5309 
+2025-09-05 20:21:18,747 - MMSA [INFO] - A: >>  Has0_acc_2: 0.5748  Has0_F1_score: 0.4196  Non0_acc_2: 0.5748  Non0_F1_score: 0.4196  Mult_acc_5: 0.3910  Mult_acc_7: 0.3910  MAE: 0.7840  Corr: -0.0912 
+2025-09-05 20:21:18,751 - MMSA [INFO] - V: >>  Has0_acc_2: 0.5693  Has0_F1_score: 0.4131  Non0_acc_2: 0.5693  Non0_F1_score: 0.4131  Mult_acc_5: 0.4058  Mult_acc_7: 0.4058  MAE: 0.8420  Corr: 0.1360 
+2025-09-05 20:21:19,295 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.9039 
+2025-09-05 20:21:19,298 - MMSA [INFO] - M: >>  Has0_acc_2: 0.7991  Has0_F1_score: 0.8011  Non0_acc_2: 0.8333  Non0_F1_score: 0.8341  Mult_acc_5: 0.4105  Mult_acc_7: 0.3406  MAE: 0.8919  Corr: 0.7134 
+2025-09-05 20:21:26,502 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8575  Has0_F1_score: 0.8582  Non0_acc_2: 0.8773  Non0_F1_score: 0.8777  Mult_acc_5: 0.4673  Mult_acc_7: 0.4346  MAE: 0.6903  Corr: 0.8061 
+2025-09-05 20:21:26,507 - MMSA [INFO] - T: >>  Has0_acc_2: 0.5498  Has0_F1_score: 0.3918  Non0_acc_2: 0.5498  Non0_F1_score: 0.3918  Mult_acc_5: 0.2850  Mult_acc_7: 0.2850  MAE: 0.8606  Corr: 0.6974 
+2025-09-05 20:21:26,511 - MMSA [INFO] - A: >>  Has0_acc_2: 0.5530  Has0_F1_score: 0.3938  Non0_acc_2: 0.5530  Non0_F1_score: 0.3938  Mult_acc_5: 0.4852  Mult_acc_7: 0.4852  MAE: 0.6186  Corr: -0.1403 
+2025-09-05 20:21:26,521 - MMSA [INFO] - V: >>  Has0_acc_2: 0.5639  Has0_F1_score: 0.4066  Non0_acc_2: 0.5635  Non0_F1_score: 0.4062  Mult_acc_5: 0.4852  Mult_acc_7: 0.4852  MAE: 0.6758  Corr: 0.1513 
+2025-09-05 20:21:27,118 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.8718 
+2025-09-05 20:21:27,122 - MMSA [INFO] - M: >>  Has0_acc_2: 0.7904  Has0_F1_score: 0.7924  Non0_acc_2: 0.8287  Non0_F1_score: 0.8296  Mult_acc_5: 0.4236  Mult_acc_7: 0.3493  MAE: 0.8656  Corr: 0.7395 
+2025-09-05 20:21:35,203 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8879  Has0_F1_score: 0.8884  Non0_acc_2: 0.9090  Non0_F1_score: 0.9092  Mult_acc_5: 0.4852  Mult_acc_7: 0.4548  MAE: 0.6363  Corr: 0.8348 
+2025-09-05 20:21:35,207 - MMSA [INFO] - T: >>  Has0_acc_2: 0.6184  Has0_F1_score: 0.5442  Non0_acc_2: 0.6184  Non0_F1_score: 0.5442  Mult_acc_5: 0.3193  Mult_acc_7: 0.3193  MAE: 0.7658  Corr: 0.7308 
+2025-09-05 20:21:35,211 - MMSA [INFO] - A: >>  Has0_acc_2: 0.5039  Has0_F1_score: 0.3377  Non0_acc_2: 0.5039  Non0_F1_score: 0.3377  Mult_acc_5: 0.5981  Mult_acc_7: 0.5981  MAE: 0.5223  Corr: -0.0596 
+2025-09-05 20:21:35,216 - MMSA [INFO] - V: >>  Has0_acc_2: 0.5296  Has0_F1_score: 0.3667  Non0_acc_2: 0.5296  Non0_F1_score: 0.3667  Mult_acc_5: 0.5218  Mult_acc_7: 0.5218  MAE: 0.5875  Corr: 0.2639 
+2025-09-05 20:21:35,762 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.8338 
+2025-09-05 20:21:35,766 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8297  Has0_F1_score: 0.8311  Non0_acc_2: 0.8704  Non0_F1_score: 0.8705  Mult_acc_5: 0.4105  Mult_acc_7: 0.3362  MAE: 0.8359  Corr: 0.7620 
+2025-09-05 20:21:49,131 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8972  Has0_F1_score: 0.8977  Non0_acc_2: 0.9163  Non0_F1_score: 0.9165  Mult_acc_5: 0.5117  Mult_acc_7: 0.4782  MAE: 0.5790  Corr: 0.8620 
+2025-09-05 20:21:49,135 - MMSA [INFO] - T: >>  Has0_acc_2: 0.7710  Has0_F1_score: 0.7665  Non0_acc_2: 0.7710  Non0_F1_score: 0.7665  Mult_acc_5: 0.3816  Mult_acc_7: 0.3816  MAE: 0.6409  Corr: 0.6886 
+2025-09-05 20:21:49,138 - MMSA [INFO] - A: >>  Has0_acc_2: 0.4050  Has0_F1_score: 0.2335  Non0_acc_2: 0.4050  Non0_F1_score: 0.2335  Mult_acc_5: 0.6425  Mult_acc_7: 0.6425  MAE: 0.5115  Corr: -0.0063 
+2025-09-05 20:21:49,144 - MMSA [INFO] - V: >>  Has0_acc_2: 0.4618  Has0_F1_score: 0.2918  Non0_acc_2: 0.4618  Non0_F1_score: 0.2918  Mult_acc_5: 0.5350  Mult_acc_7: 0.5350  MAE: 0.5679  Corr: 0.3901 
+2025-09-05 20:21:49,707 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.8416 
+2025-09-05 20:21:49,710 - MMSA [INFO] - M: >>  Has0_acc_2: 0.7860  Has0_F1_score: 0.7879  Non0_acc_2: 0.8241  Non0_F1_score: 0.8250  Mult_acc_5: 0.4236  Mult_acc_7: 0.3493  MAE: 0.8491  Corr: 0.7504 
+2025-09-05 20:21:55,496 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9026  Has0_F1_score: 0.9031  Non0_acc_2: 0.9228  Non0_F1_score: 0.9230  Mult_acc_5: 0.5397  Mult_acc_7: 0.5047  MAE: 0.5337  Corr: 0.8829 
+2025-09-05 20:21:55,500 - MMSA [INFO] - T: >>  Has0_acc_2: 0.7960  Has0_F1_score: 0.7964  Non0_acc_2: 0.7960  Non0_F1_score: 0.7964  Mult_acc_5: 0.4182  Mult_acc_7: 0.4182  MAE: 0.5714  Corr: 0.6887 
+2025-09-05 20:21:55,503 - MMSA [INFO] - A: >>  Has0_acc_2: 0.3450  Has0_F1_score: 0.1770  Non0_acc_2: 0.3450  Non0_F1_score: 0.1770  Mult_acc_5: 0.6129  Mult_acc_7: 0.6129  MAE: 0.5543  Corr: -0.0706 
+2025-09-05 20:21:55,508 - MMSA [INFO] - V: >>  Has0_acc_2: 0.4089  Has0_F1_score: 0.2373  Non0_acc_2: 0.4089  Non0_F1_score: 0.2373  Mult_acc_5: 0.4914  Mult_acc_7: 0.4914  MAE: 0.6079  Corr: 0.2830 
+2025-09-05 20:21:56,071 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.8185 
+2025-09-05 20:21:56,075 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8079  Has0_F1_score: 0.8095  Non0_acc_2: 0.8472  Non0_F1_score: 0.8475  Mult_acc_5: 0.4192  Mult_acc_7: 0.3493  MAE: 0.8120  Corr: 0.7652 
+2025-09-05 20:21:56,448 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9026  Has0_F1_score: 0.9031  Non0_acc_2: 0.9253  Non0_F1_score: 0.9254  Mult_acc_5: 0.5927  Mult_acc_7: 0.5537  MAE: 0.4771  Corr: 0.9051 
+2025-09-05 20:21:56,453 - MMSA [INFO] - T: >>  Has0_acc_2: 0.7679  Has0_F1_score: 0.7684  Non0_acc_2: 0.7679  Non0_F1_score: 0.7684  Mult_acc_5: 0.4759  Mult_acc_7: 0.4759  MAE: 0.5115  Corr: 0.6846 
+2025-09-05 20:21:56,460 - MMSA [INFO] - A: >>  Has0_acc_2: 0.3069  Has0_F1_score: 0.1441  Non0_acc_2: 0.3069  Non0_F1_score: 0.1441  Mult_acc_5: 0.5755  Mult_acc_7: 0.5755  MAE: 0.5942  Corr: -0.0780 
+2025-09-05 20:21:56,465 - MMSA [INFO] - V: >>  Has0_acc_2: 0.3528  Has0_F1_score: 0.1840  Non0_acc_2: 0.3528  Non0_F1_score: 0.1840  Mult_acc_5: 0.4533  Mult_acc_7: 0.4533  MAE: 0.6491  Corr: 0.2210 
+2025-09-05 20:21:57,051 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.8269 
+2025-09-05 20:21:57,055 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8035  Has0_F1_score: 0.8052  Non0_acc_2: 0.8426  Non0_F1_score: 0.8430  Mult_acc_5: 0.4847  Mult_acc_7: 0.3886  MAE: 0.8018  Corr: 0.7650 
+2025-09-05 20:22:02,095 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9167  Has0_F1_score: 0.9170  Non0_acc_2: 0.9374  Non0_F1_score: 0.9376  Mult_acc_5: 0.6464  Mult_acc_7: 0.6012  MAE: 0.4359  Corr: 0.9193 
+2025-09-05 20:22:02,099 - MMSA [INFO] - T: >>  Has0_acc_2: 0.8107  Has0_F1_score: 0.8074  Non0_acc_2: 0.8107  Non0_F1_score: 0.8074  Mult_acc_5: 0.5600  Mult_acc_7: 0.5600  MAE: 0.4707  Corr: 0.6789 
+2025-09-05 20:22:02,104 - MMSA [INFO] - A: >>  Has0_acc_2: 0.2897  Has0_F1_score: 0.1302  Non0_acc_2: 0.2897  Non0_F1_score: 0.1302  Mult_acc_5: 0.5522  Mult_acc_7: 0.5522  MAE: 0.6274  Corr: -0.0806 
+2025-09-05 20:22:02,109 - MMSA [INFO] - V: >>  Has0_acc_2: 0.3201  Has0_F1_score: 0.1552  Non0_acc_2: 0.3201  Non0_F1_score: 0.1552  Mult_acc_5: 0.4346  Mult_acc_7: 0.4346  MAE: 0.6870  Corr: 0.1879 
+2025-09-05 20:22:02,686 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.7617 
+2025-09-05 20:22:02,690 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8035  Has0_F1_score: 0.8040  Non0_acc_2: 0.8380  Non0_F1_score: 0.8370  Mult_acc_5: 0.4847  Mult_acc_7: 0.3974  MAE: 0.7728  Corr: 0.7810 
+2025-09-05 20:22:10,478 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9159  Has0_F1_score: 0.9162  Non0_acc_2: 0.9366  Non0_F1_score: 0.9367  Mult_acc_5: 0.6651  Mult_acc_7: 0.6168  MAE: 0.4022  Corr: 0.9309 
+2025-09-05 20:22:10,482 - MMSA [INFO] - T: >>  Has0_acc_2: 0.8474  Has0_F1_score: 0.8430  Non0_acc_2: 0.8474  Non0_F1_score: 0.8430  Mult_acc_5: 0.5202  Mult_acc_7: 0.5202  MAE: 0.4553  Corr: 0.7177 
+2025-09-05 20:22:10,486 - MMSA [INFO] - A: >>  Has0_acc_2: 0.2819  Has0_F1_score: 0.1240  Non0_acc_2: 0.2819  Non0_F1_score: 0.1240  Mult_acc_5: 0.5343  Mult_acc_7: 0.5343  MAE: 0.6526  Corr: -0.0689 
+2025-09-05 20:22:10,490 - MMSA [INFO] - V: >>  Has0_acc_2: 0.2749  Has0_F1_score: 0.1186  Non0_acc_2: 0.2749  Non0_F1_score: 0.1186  Mult_acc_5: 0.4213  Mult_acc_7: 0.4213  MAE: 0.7177  Corr: 0.1731 
+2025-09-05 20:22:16,993 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.7890 
+2025-09-05 20:22:16,997 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8079  Has0_F1_score: 0.8082  Non0_acc_2: 0.8426  Non0_F1_score: 0.8415  Mult_acc_5: 0.5371  Mult_acc_7: 0.4236  MAE: 0.7705  Corr: 0.7802 
+2025-09-05 20:22:22,050 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9245  Has0_F1_score: 0.9246  Non0_acc_2: 0.9374  Non0_F1_score: 0.9374  Mult_acc_5: 0.6955  Mult_acc_7: 0.6441  MAE: 0.3845  Corr: 0.9379 
+2025-09-05 20:22:22,054 - MMSA [INFO] - T: >>  Has0_acc_2: 0.8707  Has0_F1_score: 0.8675  Non0_acc_2: 0.8707  Non0_F1_score: 0.8675  Mult_acc_5: 0.5569  Mult_acc_7: 0.5569  MAE: 0.4596  Corr: 0.7433 
+2025-09-05 20:22:22,058 - MMSA [INFO] - A: >>  Has0_acc_2: 0.2757  Has0_F1_score: 0.1192  Non0_acc_2: 0.2757  Non0_F1_score: 0.1192  Mult_acc_5: 0.5234  Mult_acc_7: 0.5234  MAE: 0.6734  Corr: -0.1112 
+2025-09-05 20:22:22,062 - MMSA [INFO] - V: >>  Has0_acc_2: 0.2329  Has0_F1_score: 0.0880  Non0_acc_2: 0.2329  Non0_F1_score: 0.0880  Mult_acc_5: 0.3995  Mult_acc_7: 0.3995  MAE: 0.7546  Corr: 0.1428 
+2025-09-05 20:22:16,105 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.7637 
+2025-09-05 20:22:16,109 - MMSA [INFO] - M: >>  Has0_acc_2: 0.7991  Has0_F1_score: 0.7979  Non0_acc_2: 0.8241  Non0_F1_score: 0.8215  Mult_acc_5: 0.5109  Mult_acc_7: 0.4105  MAE: 0.7647  Corr: 0.7802 
+2025-09-05 20:22:21,208 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9330  Has0_F1_score: 0.9332  Non0_acc_2: 0.9488  Non0_F1_score: 0.9489  Mult_acc_5: 0.7173  Mult_acc_7: 0.6659  MAE: 0.3512  Corr: 0.9477 
+2025-09-05 20:22:21,213 - MMSA [INFO] - T: >>  Has0_acc_2: 0.8964  Has0_F1_score: 0.8940  Non0_acc_2: 0.8964  Non0_F1_score: 0.8940  Mult_acc_5: 0.5452  Mult_acc_7: 0.5452  MAE: 0.4818  Corr: 0.7726 
+2025-09-05 20:22:21,216 - MMSA [INFO] - A: >>  Has0_acc_2: 0.2741  Has0_F1_score: 0.1180  Non0_acc_2: 0.2741  Non0_F1_score: 0.1180  Mult_acc_5: 0.5078  Mult_acc_7: 0.5078  MAE: 0.6857  Corr: -0.1185 
+2025-09-05 20:22:21,221 - MMSA [INFO] - V: >>  Has0_acc_2: 0.2017  Has0_F1_score: 0.0677  Non0_acc_2: 0.2017  Non0_F1_score: 0.0677  Mult_acc_5: 0.3863  Mult_acc_7: 0.3863  MAE: 0.7839  Corr: 0.1187 
+2025-09-05 20:22:21,814 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.7595 
+2025-09-05 20:22:21,818 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8079  Has0_F1_score: 0.8079  Non0_acc_2: 0.8333  Non0_F1_score: 0.8321  Mult_acc_5: 0.5022  Mult_acc_7: 0.4017  MAE: 0.7536  Corr: 0.7858 
+2025-09-05 20:22:29,831 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9346  Has0_F1_score: 0.9347  Non0_acc_2: 0.9496  Non0_F1_score: 0.9496  Mult_acc_5: 0.7453  Mult_acc_7: 0.6931  MAE: 0.3267  Corr: 0.9536 
+2025-09-05 20:22:29,835 - MMSA [INFO] - T: >>  Has0_acc_2: 0.9143  Has0_F1_score: 0.9119  Non0_acc_2: 0.9143  Non0_F1_score: 0.9119  Mult_acc_5: 0.5545  Mult_acc_7: 0.5545  MAE: 0.4807  Corr: 0.8037 
+2025-09-05 20:22:29,840 - MMSA [INFO] - A: >>  Has0_acc_2: 0.2796  Has0_F1_score: 0.1222  Non0_acc_2: 0.2796  Non0_F1_score: 0.1222  Mult_acc_5: 0.4984  Mult_acc_7: 0.4984  MAE: 0.6874  Corr: -0.1422 
+2025-09-05 20:22:29,845 - MMSA [INFO] - V: >>  Has0_acc_2: 0.1783  Has0_F1_score: 0.0540  Non0_acc_2: 0.1783  Non0_F1_score: 0.0540  Mult_acc_5: 0.3762  Mult_acc_7: 0.3762  MAE: 0.8082  Corr: 0.1315 
+2025-09-05 20:22:30,403 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.7284 
+2025-09-05 20:22:30,407 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8166  Has0_F1_score: 0.8166  Non0_acc_2: 0.8426  Non0_F1_score: 0.8415  Mult_acc_5: 0.5197  Mult_acc_7: 0.4148  MAE: 0.7472  Corr: 0.7861 
+2025-09-05 20:22:38,210 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9299  Has0_F1_score: 0.9301  Non0_acc_2: 0.9480  Non0_F1_score: 0.9480  Mult_acc_5: 0.7726  Mult_acc_7: 0.7188  MAE: 0.3193  Corr: 0.9569 
+2025-09-05 20:22:38,214 - MMSA [INFO] - T: >>  Has0_acc_2: 0.9369  Has0_F1_score: 0.9357  Non0_acc_2: 0.9369  Non0_F1_score: 0.9357  Mult_acc_5: 0.5678  Mult_acc_7: 0.5678  MAE: 0.4678  Corr: 0.8295 
+2025-09-05 20:22:38,219 - MMSA [INFO] - A: >>  Has0_acc_2: 0.2726  Has0_F1_score: 0.1168  Non0_acc_2: 0.2726  Non0_F1_score: 0.1168  Mult_acc_5: 0.4868  Mult_acc_7: 0.4868  MAE: 0.6901  Corr: -0.1610 
+2025-09-05 20:22:38,227 - MMSA [INFO] - V: >>  Has0_acc_2: 0.1597  Has0_F1_score: 0.0440  Non0_acc_2: 0.1597  Non0_F1_score: 0.0440  Mult_acc_5: 0.3590  Mult_acc_7: 0.3590  MAE: 0.8279  Corr: 0.1335 
+2025-09-05 20:22:38,877 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.7636 
+2025-09-05 20:22:38,881 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8210  Has0_F1_score: 0.8201  Non0_acc_2: 0.8472  Non0_F1_score: 0.8452  Mult_acc_5: 0.4847  Mult_acc_7: 0.3799  MAE: 0.7542  Corr: 0.7873 
+2025-09-05 20:22:44,159 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9447  Has0_F1_score: 0.9448  Non0_acc_2: 0.9634  Non0_F1_score: 0.9634  Mult_acc_5: 0.7640  Mult_acc_7: 0.7103  MAE: 0.3035  Corr: 0.9610 
+2025-09-05 20:22:44,163 - MMSA [INFO] - T: >>  Has0_acc_2: 0.9478  Has0_F1_score: 0.9466  Non0_acc_2: 0.9478  Non0_F1_score: 0.9466  Mult_acc_5: 0.5693  Mult_acc_7: 0.5693  MAE: 0.4896  Corr: 0.8480 
+2025-09-05 20:22:44,167 - MMSA [INFO] - A: >>  Has0_acc_2: 0.3139  Has0_F1_score: 0.2261  Non0_acc_2: 0.3139  Non0_F1_score: 0.2261  Mult_acc_5: 0.4782  Mult_acc_7: 0.4782  MAE: 0.6844  Corr: -0.1785 
+2025-09-05 20:22:44,172 - MMSA [INFO] - V: >>  Has0_acc_2: 0.1449  Has0_F1_score: 0.0367  Non0_acc_2: 0.1449  Non0_F1_score: 0.0367  Mult_acc_5: 0.3528  Mult_acc_7: 0.3528  MAE: 0.8371  Corr: 0.0692 
+2025-09-05 20:22:44,765 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.7437 
+2025-09-05 20:22:44,769 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8253  Has0_F1_score: 0.8250  Non0_acc_2: 0.8519  Non0_F1_score: 0.8505  Mult_acc_5: 0.5284  Mult_acc_7: 0.4192  MAE: 0.7472  Corr: 0.7881 
+2025-09-05 20:22:49,804 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9439  Has0_F1_score: 0.9440  Non0_acc_2: 0.9626  Non0_F1_score: 0.9626  Mult_acc_5: 0.7734  Mult_acc_7: 0.7196  MAE: 0.2846  Corr: 0.9659 
+2025-09-05 20:22:49,808 - MMSA [INFO] - T: >>  Has0_acc_2: 0.9509  Has0_F1_score: 0.9496  Non0_acc_2: 0.9509  Non0_F1_score: 0.9496  Mult_acc_5: 0.5600  Mult_acc_7: 0.5600  MAE: 0.4806  Corr: 0.8669 
+2025-09-05 20:22:49,813 - MMSA [INFO] - A: >>  Has0_acc_2: 0.5771  Has0_F1_score: 0.5427  Non0_acc_2: 0.5771  Non0_F1_score: 0.5427  Mult_acc_5: 0.4766  Mult_acc_7: 0.4766  MAE: 0.6804  Corr: -0.2125 
+2025-09-05 20:22:49,818 - MMSA [INFO] - V: >>  Has0_acc_2: 0.5382  Has0_F1_score: 0.6099  Non0_acc_2: 0.5382  Non0_F1_score: 0.6099  Mult_acc_5: 0.3481  Mult_acc_7: 0.3481  MAE: 0.8427  Corr: 0.0867 
+2025-09-05 20:22:50,404 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.7419 
+2025-09-05 20:22:50,408 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8253  Has0_F1_score: 0.8253  Non0_acc_2: 0.8519  Non0_F1_score: 0.8508  Mult_acc_5: 0.5328  Mult_acc_7: 0.4236  MAE: 0.7316  Corr: 0.7916 
+2025-09-05 20:22:55,418 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9509  Has0_F1_score: 0.9510  Non0_acc_2: 0.9683  Non0_F1_score: 0.9683  Mult_acc_5: 0.7983  Mult_acc_7: 0.7438  MAE: 0.2662  Corr: 0.9695 
+2025-09-05 20:22:55,422 - MMSA [INFO] - T: >>  Has0_acc_2: 0.9595  Has0_F1_score: 0.9588  Non0_acc_2: 0.9595  Non0_F1_score: 0.9588  Mult_acc_5: 0.5615  Mult_acc_7: 0.5607  MAE: 0.4657  Corr: 0.8789 
+2025-09-05 20:22:55,426 - MMSA [INFO] - A: >>  Has0_acc_2: 0.7126  Has0_F1_score: 0.5943  Non0_acc_2: 0.7126  Non0_F1_score: 0.5943  Mult_acc_5: 0.4759  Mult_acc_7: 0.4759  MAE: 0.6730  Corr: -0.2146 
+2025-09-05 20:22:55,432 - MMSA [INFO] - V: >>  Has0_acc_2: 0.8629  Has0_F1_score: 0.7994  Non0_acc_2: 0.8629  Non0_F1_score: 0.7994  Mult_acc_5: 0.3294  Mult_acc_7: 0.3294  MAE: 0.8449  Corr: 0.0919 
+2025-09-05 20:23:02,036 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.7367 
+2025-09-05 20:23:02,040 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8384  Has0_F1_score: 0.8383  Non0_acc_2: 0.8657  Non0_F1_score: 0.8646  Mult_acc_5: 0.5284  Mult_acc_7: 0.4236  MAE: 0.7257  Corr: 0.7947 
+2025-09-05 20:23:07,301 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9470  Has0_F1_score: 0.9472  Non0_acc_2: 0.9675  Non0_F1_score: 0.9675  Mult_acc_5: 0.8100  Mult_acc_7: 0.7562  MAE: 0.2561  Corr: 0.9719 
+2025-09-05 20:23:07,305 - MMSA [INFO] - T: >>  Has0_acc_2: 0.9603  Has0_F1_score: 0.9593  Non0_acc_2: 0.9603  Non0_F1_score: 0.9593  Mult_acc_5: 0.5717  Mult_acc_7: 0.5701  MAE: 0.4638  Corr: 0.8896 
+2025-09-05 20:23:07,309 - MMSA [INFO] - A: >>  Has0_acc_2: 0.7033  Has0_F1_score: 0.5808  Non0_acc_2: 0.7033  Non0_F1_score: 0.5808  Mult_acc_5: 0.4720  Mult_acc_7: 0.4720  MAE: 0.6712  Corr: -0.2433 
+2025-09-05 20:23:07,313 - MMSA [INFO] - V: >>  Has0_acc_2: 0.8684  Has0_F1_score: 0.8072  Non0_acc_2: 0.8684  Non0_F1_score: 0.8072  Mult_acc_5: 0.3240  Mult_acc_7: 0.3240  MAE: 0.8519  Corr: 0.0934 
+2025-09-05 20:23:01,397 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.7263 
+2025-09-05 20:23:01,400 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8297  Has0_F1_score: 0.8304  Non0_acc_2: 0.8611  Non0_F1_score: 0.8607  Mult_acc_5: 0.5066  Mult_acc_7: 0.3974  MAE: 0.7300  Corr: 0.7938 
+2025-09-05 20:23:09,023 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9556  Has0_F1_score: 0.9557  Non0_acc_2: 0.9732  Non0_F1_score: 0.9732  Mult_acc_5: 0.8115  Mult_acc_7: 0.7570  MAE: 0.2525  Corr: 0.9733 
+2025-09-05 20:23:09,027 - MMSA [INFO] - T: >>  Has0_acc_2: 0.9681  Has0_F1_score: 0.9675  Non0_acc_2: 0.9681  Non0_F1_score: 0.9675  Mult_acc_5: 0.6036  Mult_acc_7: 0.6012  MAE: 0.4461  Corr: 0.9018 
+2025-09-05 20:23:09,031 - MMSA [INFO] - A: >>  Has0_acc_2: 0.6970  Has0_F1_score: 0.5726  Non0_acc_2: 0.6970  Non0_F1_score: 0.5726  Mult_acc_5: 0.4735  Mult_acc_7: 0.4735  MAE: 0.6735  Corr: -0.2680 
+2025-09-05 20:23:09,035 - MMSA [INFO] - V: >>  Has0_acc_2: 0.8723  Has0_F1_score: 0.8128  Non0_acc_2: 0.8723  Non0_F1_score: 0.8128  Mult_acc_5: 0.3100  Mult_acc_7: 0.3100  MAE: 0.8600  Corr: 0.1183 
+2025-09-05 20:23:09,675 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.7102 
+2025-09-05 20:23:09,679 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8166  Has0_F1_score: 0.8180  Non0_acc_2: 0.8519  Non0_F1_score: 0.8520  Mult_acc_5: 0.5415  Mult_acc_7: 0.4323  MAE: 0.7240  Corr: 0.7917 
+2025-09-05 20:23:16,810 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9611  Has0_F1_score: 0.9611  Non0_acc_2: 0.9805  Non0_F1_score: 0.9805  Mult_acc_5: 0.8224  Mult_acc_7: 0.7679  MAE: 0.2331  Corr: 0.9771 
+2025-09-05 20:23:16,814 - MMSA [INFO] - T: >>  Has0_acc_2: 0.9688  Has0_F1_score: 0.9684  Non0_acc_2: 0.9688  Non0_F1_score: 0.9684  Mult_acc_5: 0.6488  Mult_acc_7: 0.6441  MAE: 0.4398  Corr: 0.9104 
+2025-09-05 20:23:16,819 - MMSA [INFO] - A: >>  Has0_acc_2: 0.6760  Has0_F1_score: 0.5453  Non0_acc_2: 0.6760  Non0_F1_score: 0.5453  Mult_acc_5: 0.4727  Mult_acc_7: 0.4727  MAE: 0.6786  Corr: -0.2788 
+2025-09-05 20:23:16,824 - MMSA [INFO] - V: >>  Has0_acc_2: 0.8684  Has0_F1_score: 0.8072  Non0_acc_2: 0.8684  Non0_F1_score: 0.8072  Mult_acc_5: 0.3123  Mult_acc_7: 0.3123  MAE: 0.8675  Corr: 0.1641 
+2025-09-05 20:23:17,402 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.7125 
+2025-09-05 20:23:17,405 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8210  Has0_F1_score: 0.8219  Non0_acc_2: 0.8565  Non0_F1_score: 0.8561  Mult_acc_5: 0.5590  Mult_acc_7: 0.4498  MAE: 0.7185  Corr: 0.7947 
+2025-09-05 20:23:22,560 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9603  Has0_F1_score: 0.9604  Non0_acc_2: 0.9789  Non0_F1_score: 0.9789  Mult_acc_5: 0.8115  Mult_acc_7: 0.7570  MAE: 0.2333  Corr: 0.9775 
+2025-09-05 20:23:22,564 - MMSA [INFO] - T: >>  Has0_acc_2: 0.9759  Has0_F1_score: 0.9755  Non0_acc_2: 0.9759  Non0_F1_score: 0.9755  Mult_acc_5: 0.6573  Mult_acc_7: 0.6480  MAE: 0.4309  Corr: 0.9164 
+2025-09-05 20:23:22,568 - MMSA [INFO] - A: >>  Has0_acc_2: 0.6636  Has0_F1_score: 0.5293  Non0_acc_2: 0.6636  Non0_F1_score: 0.5293  Mult_acc_5: 0.4665  Mult_acc_7: 0.4665  MAE: 0.6879  Corr: -0.2907 
+2025-09-05 20:23:22,573 - MMSA [INFO] - V: >>  Has0_acc_2: 0.8676  Has0_F1_score: 0.8061  Non0_acc_2: 0.8676  Non0_F1_score: 0.8061  Mult_acc_5: 0.3045  Mult_acc_7: 0.3045  MAE: 0.8807  Corr: 0.1860 
+2025-09-05 20:23:23,165 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.7256 
+2025-09-05 20:23:23,169 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8253  Has0_F1_score: 0.8259  Non0_acc_2: 0.8565  Non0_F1_score: 0.8559  Mult_acc_5: 0.5371  Mult_acc_7: 0.4279  MAE: 0.7184  Corr: 0.7979 
+2025-09-05 20:23:28,346 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9634  Has0_F1_score: 0.9635  Non0_acc_2: 0.9789  Non0_F1_score: 0.9789  Mult_acc_5: 0.8232  Mult_acc_7: 0.7687  MAE: 0.2268  Corr: 0.9788 
+2025-09-05 20:23:28,351 - MMSA [INFO] - T: >>  Has0_acc_2: 0.9798  Has0_F1_score: 0.9795  Non0_acc_2: 0.9798  Non0_F1_score: 0.9795  Mult_acc_5: 0.6698  Mult_acc_7: 0.6565  MAE: 0.4026  Corr: 0.9292 
+2025-09-05 20:23:28,355 - MMSA [INFO] - A: >>  Has0_acc_2: 0.6456  Has0_F1_score: 0.5066  Non0_acc_2: 0.6456  Non0_F1_score: 0.5066  Mult_acc_5: 0.4688  Mult_acc_7: 0.4688  MAE: 0.7004  Corr: -0.3114 
+2025-09-05 20:23:28,360 - MMSA [INFO] - V: >>  Has0_acc_2: 0.8629  Has0_F1_score: 0.7994  Non0_acc_2: 0.8629  Non0_F1_score: 0.7994  Mult_acc_5: 0.2913  Mult_acc_7: 0.2913  MAE: 0.8917  Corr: 0.2318 
+2025-09-05 20:23:28,949 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.7229 
+2025-09-05 20:23:28,953 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8210  Has0_F1_score: 0.8221  Non0_acc_2: 0.8565  Non0_F1_score: 0.8564  Mult_acc_5: 0.5109  Mult_acc_7: 0.4017  MAE: 0.7247  Corr: 0.7965 
+2025-09-05 20:23:34,056 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9611  Has0_F1_score: 0.9611  Non0_acc_2: 0.9781  Non0_F1_score: 0.9781  Mult_acc_5: 0.8302  Mult_acc_7: 0.7757  MAE: 0.2199  Corr: 0.9798 
+2025-09-05 20:23:34,060 - MMSA [INFO] - T: >>  Has0_acc_2: 0.9774  Has0_F1_score: 0.9771  Non0_acc_2: 0.9774  Non0_F1_score: 0.9771  Mult_acc_5: 0.6791  Mult_acc_7: 0.6604  MAE: 0.3952  Corr: 0.9330 
+2025-09-05 20:23:34,064 - MMSA [INFO] - A: >>  Has0_acc_2: 0.6301  Has0_F1_score: 0.4871  Non0_acc_2: 0.6301  Non0_F1_score: 0.4871  Mult_acc_5: 0.4548  Mult_acc_7: 0.4548  MAE: 0.7187  Corr: -0.3068 
+2025-09-05 20:23:34,068 - MMSA [INFO] - V: >>  Has0_acc_2: 0.8621  Has0_F1_score: 0.7983  Non0_acc_2: 0.8621  Non0_F1_score: 0.7983  Mult_acc_5: 0.2749  Mult_acc_7: 0.2749  MAE: 0.9037  Corr: 0.2326 
+2025-09-05 20:23:34,702 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.7211 
+2025-09-05 20:23:34,706 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8253  Has0_F1_score: 0.8263  Non0_acc_2: 0.8611  Non0_F1_score: 0.8609  Mult_acc_5: 0.5415  Mult_acc_7: 0.4323  MAE: 0.7205  Corr: 0.7937 
+2025-09-05 20:23:39,894 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9572  Has0_F1_score: 0.9573  Non0_acc_2: 0.9813  Non0_F1_score: 0.9813  Mult_acc_5: 0.8427  Mult_acc_7: 0.7882  MAE: 0.2106  Corr: 0.9812 
+2025-09-05 20:23:39,898 - MMSA [INFO] - T: >>  Has0_acc_2: 0.9774  Has0_F1_score: 0.9771  Non0_acc_2: 0.9774  Non0_F1_score: 0.9771  Mult_acc_5: 0.6846  Mult_acc_7: 0.6581  MAE: 0.3907  Corr: 0.9344 
+2025-09-05 20:23:39,901 - MMSA [INFO] - A: >>  Has0_acc_2: 0.6176  Has0_F1_score: 0.4716  Non0_acc_2: 0.6176  Non0_F1_score: 0.4716  Mult_acc_5: 0.4369  Mult_acc_7: 0.4369  MAE: 0.7374  Corr: -0.3040 
+2025-09-05 20:23:39,905 - MMSA [INFO] - V: >>  Has0_acc_2: 0.8614  Has0_F1_score: 0.7972  Non0_acc_2: 0.8614  Non0_F1_score: 0.7972  Mult_acc_5: 0.2640  Mult_acc_7: 0.2640  MAE: 0.9116  Corr: 0.2463 
+2025-09-05 20:23:40,505 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.7033 
+2025-09-05 20:23:40,509 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8297  Has0_F1_score: 0.8306  Non0_acc_2: 0.8611  Non0_F1_score: 0.8609  Mult_acc_5: 0.5459  Mult_acc_7: 0.4367  MAE: 0.7159  Corr: 0.7947 
+2025-09-05 20:23:47,476 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9587  Has0_F1_score: 0.9588  Non0_acc_2: 0.9797  Non0_F1_score: 0.9797  Mult_acc_5: 0.8481  Mult_acc_7: 0.7936  MAE: 0.2000  Corr: 0.9833 
+2025-09-05 20:23:47,480 - MMSA [INFO] - T: >>  Has0_acc_2: 0.9813  Has0_F1_score: 0.9812  Non0_acc_2: 0.9813  Non0_F1_score: 0.9812  Mult_acc_5: 0.7259  Mult_acc_7: 0.6877  MAE: 0.3591  Corr: 0.9439 
+2025-09-05 20:23:47,484 - MMSA [INFO] - A: >>  Has0_acc_2: 0.6044  Has0_F1_score: 0.4553  Non0_acc_2: 0.6044  Non0_F1_score: 0.4553  Mult_acc_5: 0.4276  Mult_acc_7: 0.4276  MAE: 0.7563  Corr: -0.2984 
+2025-09-05 20:23:47,488 - MMSA [INFO] - V: >>  Has0_acc_2: 0.8668  Has0_F1_score: 0.8050  Non0_acc_2: 0.8668  Non0_F1_score: 0.8050  Mult_acc_5: 0.2562  Mult_acc_7: 0.2562  MAE: 0.9140  Corr: 0.2560 
+2025-09-05 20:23:48,123 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.7376 
+2025-09-05 20:23:48,127 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8297  Has0_F1_score: 0.8306  Non0_acc_2: 0.8657  Non0_F1_score: 0.8654  Mult_acc_5: 0.5109  Mult_acc_7: 0.4061  MAE: 0.7244  Corr: 0.7984 
+2025-09-05 20:23:53,234 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9611  Has0_F1_score: 0.9612  Non0_acc_2: 0.9838  Non0_F1_score: 0.9838  Mult_acc_5: 0.8567  Mult_acc_7: 0.8022  MAE: 0.1995  Corr: 0.9843 
+2025-09-05 20:23:53,237 - MMSA [INFO] - T: >>  Has0_acc_2: 0.9805  Has0_F1_score: 0.9805  Non0_acc_2: 0.9805  Non0_F1_score: 0.9805  Mult_acc_5: 0.7290  Mult_acc_7: 0.6776  MAE: 0.3475  Corr: 0.9466 
+2025-09-05 20:23:53,242 - MMSA [INFO] - A: >>  Has0_acc_2: 0.5903  Has0_F1_score: 0.4383  Non0_acc_2: 0.5903  Non0_F1_score: 0.4383  Mult_acc_5: 0.4167  Mult_acc_7: 0.4167  MAE: 0.7735  Corr: -0.2778 
+2025-09-05 20:23:53,248 - MMSA [INFO] - V: >>  Has0_acc_2: 0.8668  Has0_F1_score: 0.8050  Non0_acc_2: 0.8668  Non0_F1_score: 0.8050  Mult_acc_5: 0.2445  Mult_acc_7: 0.2445  MAE: 0.9075  Corr: 0.3100 
+2025-09-05 20:23:53,879 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.7148 
+2025-09-05 20:23:53,883 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8341  Has0_F1_score: 0.8343  Non0_acc_2: 0.8611  Non0_F1_score: 0.8604  Mult_acc_5: 0.5502  Mult_acc_7: 0.4410  MAE: 0.7068  Corr: 0.7999 
+2025-09-05 20:23:59,045 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9657  Has0_F1_score: 0.9658  Non0_acc_2: 0.9829  Non0_F1_score: 0.9829  Mult_acc_5: 0.8372  Mult_acc_7: 0.7835  MAE: 0.1984  Corr: 0.9842 
+2025-09-05 20:23:59,049 - MMSA [INFO] - T: >>  Has0_acc_2: 0.9798  Has0_F1_score: 0.9795  Non0_acc_2: 0.9798  Non0_F1_score: 0.9795  Mult_acc_5: 0.7298  Mult_acc_7: 0.6745  MAE: 0.3517  Corr: 0.9447 
+2025-09-05 20:23:59,053 - MMSA [INFO] - A: >>  Has0_acc_2: 0.5841  Has0_F1_score: 0.4308  Non0_acc_2: 0.5841  Non0_F1_score: 0.4308  Mult_acc_5: 0.4089  Mult_acc_7: 0.4089  MAE: 0.7846  Corr: -0.2553 
+2025-09-05 20:23:59,058 - MMSA [INFO] - V: >>  Has0_acc_2: 0.8637  Has0_F1_score: 0.8005  Non0_acc_2: 0.8637  Non0_F1_score: 0.8005  Mult_acc_5: 0.2399  Mult_acc_7: 0.2399  MAE: 0.8897  Corr: 0.3102 
+2025-09-05 20:23:59,672 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.7036 
+2025-09-05 20:23:59,676 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8166  Has0_F1_score: 0.8177  Non0_acc_2: 0.8519  Non0_F1_score: 0.8516  Mult_acc_5: 0.5371  Mult_acc_7: 0.4279  MAE: 0.7143  Corr: 0.7984 
+2025-09-05 20:24:04,881 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9634  Has0_F1_score: 0.9635  Non0_acc_2: 0.9829  Non0_F1_score: 0.9829  Mult_acc_5: 0.8411  Mult_acc_7: 0.7874  MAE: 0.1965  Corr: 0.9840 
+2025-09-05 20:24:04,885 - MMSA [INFO] - T: >>  Has0_acc_2: 0.9836  Has0_F1_score: 0.9835  Non0_acc_2: 0.9836  Non0_F1_score: 0.9835  Mult_acc_5: 0.7407  Mult_acc_7: 0.6713  MAE: 0.3334  Corr: 0.9516 
+2025-09-05 20:24:04,888 - MMSA [INFO] - A: >>  Has0_acc_2: 0.5826  Has0_F1_score: 0.4289  Non0_acc_2: 0.5826  Non0_F1_score: 0.4289  Mult_acc_5: 0.4003  Mult_acc_7: 0.4003  MAE: 0.7952  Corr: -0.2307 
+2025-09-05 20:24:04,893 - MMSA [INFO] - V: >>  Has0_acc_2: 0.8598  Has0_F1_score: 0.7950  Non0_acc_2: 0.8598  Non0_F1_score: 0.7950  Mult_acc_5: 0.2298  Mult_acc_7: 0.2298  MAE: 0.8669  Corr: 0.3288 
+2025-09-05 20:24:05,511 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.6972 
+2025-09-05 20:24:05,514 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8297  Has0_F1_score: 0.8306  Non0_acc_2: 0.8657  Non0_F1_score: 0.8654  Mult_acc_5: 0.5153  Mult_acc_7: 0.4061  MAE: 0.7134  Corr: 0.7986 
+2025-09-05 20:24:13,037 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9579  Has0_F1_score: 0.9580  Non0_acc_2: 0.9821  Non0_F1_score: 0.9821  Mult_acc_5: 0.8489  Mult_acc_7: 0.7944  MAE: 0.1858  Corr: 0.9861 
+2025-09-05 20:24:13,042 - MMSA [INFO] - T: >>  Has0_acc_2: 0.9790  Has0_F1_score: 0.9789  Non0_acc_2: 0.9790  Non0_F1_score: 0.9789  Mult_acc_5: 0.7531  Mult_acc_7: 0.6838  MAE: 0.3163  Corr: 0.9570 
+2025-09-05 20:24:13,046 - MMSA [INFO] - A: >>  Has0_acc_2: 0.5849  Has0_F1_score: 0.4317  Non0_acc_2: 0.5849  Non0_F1_score: 0.4317  Mult_acc_5: 0.3879  Mult_acc_7: 0.3879  MAE: 0.8019  Corr: -0.2073 
+2025-09-05 20:24:13,051 - MMSA [INFO] - V: >>  Has0_acc_2: 0.8583  Has0_F1_score: 0.7928  Non0_acc_2: 0.8583  Non0_F1_score: 0.7928  Mult_acc_5: 0.2220  Mult_acc_7: 0.2220  MAE: 0.8409  Corr: 0.3396 
+2025-09-05 20:24:13,669 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.7218 
+2025-09-05 20:24:13,673 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8341  Has0_F1_score: 0.8348  Non0_acc_2: 0.8657  Non0_F1_score: 0.8654  Mult_acc_5: 0.5109  Mult_acc_7: 0.4061  MAE: 0.7222  Corr: 0.7998 
+2025-09-05 20:24:18,783 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9634  Has0_F1_score: 0.9635  Non0_acc_2: 0.9813  Non0_F1_score: 0.9813  Mult_acc_5: 0.8590  Mult_acc_7: 0.8045  MAE: 0.1839  Corr: 0.9867 
+2025-09-05 20:24:18,787 - MMSA [INFO] - T: >>  Has0_acc_2: 0.9844  Has0_F1_score: 0.9843  Non0_acc_2: 0.9844  Non0_F1_score: 0.9843  Mult_acc_5: 0.7664  Mult_acc_7: 0.6970  MAE: 0.3120  Corr: 0.9569 
+2025-09-05 20:24:18,791 - MMSA [INFO] - A: >>  Has0_acc_2: 0.5857  Has0_F1_score: 0.4326  Non0_acc_2: 0.5857  Non0_F1_score: 0.4326  Mult_acc_5: 0.3879  Mult_acc_7: 0.3879  MAE: 0.8050  Corr: -0.1874 
+2025-09-05 20:24:18,797 - MMSA [INFO] - V: >>  Has0_acc_2: 0.8551  Has0_F1_score: 0.7884  Non0_acc_2: 0.8551  Non0_F1_score: 0.7884  Mult_acc_5: 0.2329  Mult_acc_7: 0.2329  MAE: 0.8140  Corr: 0.3730 
+2025-09-05 20:24:19,398 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.7075 
+2025-09-05 20:24:19,403 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8297  Has0_F1_score: 0.8306  Non0_acc_2: 0.8611  Non0_F1_score: 0.8609  Mult_acc_5: 0.5109  Mult_acc_7: 0.4017  MAE: 0.7199  Corr: 0.7980 
+2025-09-05 20:24:24,663 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9595  Has0_F1_score: 0.9596  Non0_acc_2: 0.9773  Non0_F1_score: 0.9773  Mult_acc_5: 0.8512  Mult_acc_7: 0.7967  MAE: 0.1817  Corr: 0.9869 
+2025-09-05 20:24:24,667 - MMSA [INFO] - T: >>  Has0_acc_2: 0.9852  Has0_F1_score: 0.9851  Non0_acc_2: 0.9852  Non0_F1_score: 0.9851  Mult_acc_5: 0.7788  Mult_acc_7: 0.7126  MAE: 0.2975  Corr: 0.9643 
+2025-09-05 20:24:24,671 - MMSA [INFO] - A: >>  Has0_acc_2: 0.5911  Has0_F1_score: 0.4392  Non0_acc_2: 0.5911  Non0_F1_score: 0.4392  Mult_acc_5: 0.3894  Mult_acc_7: 0.3894  MAE: 0.8037  Corr: -0.1710 
+2025-09-05 20:24:24,677 - MMSA [INFO] - V: >>  Has0_acc_2: 0.8528  Has0_F1_score: 0.7851  Non0_acc_2: 0.8528  Non0_F1_score: 0.7851  Mult_acc_5: 0.3707  Mult_acc_7: 0.3707  MAE: 0.7822  Corr: 0.3929 
+2025-09-05 20:24:25,308 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.7099 
+2025-09-05 20:24:25,312 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8253  Has0_F1_score: 0.8256  Non0_acc_2: 0.8519  Non0_F1_score: 0.8511  Mult_acc_5: 0.5284  Mult_acc_7: 0.4192  MAE: 0.7149  Corr: 0.7993 
+2025-09-05 20:24:30,583 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9665  Has0_F1_score: 0.9666  Non0_acc_2: 0.9838  Non0_F1_score: 0.9837  Mult_acc_5: 0.8450  Mult_acc_7: 0.7905  MAE: 0.1782  Corr: 0.9871 
+2025-09-05 20:24:30,587 - MMSA [INFO] - T: >>  Has0_acc_2: 0.9844  Has0_F1_score: 0.9843  Non0_acc_2: 0.9844  Non0_F1_score: 0.9843  Mult_acc_5: 0.7702  Mult_acc_7: 0.6931  MAE: 0.3006  Corr: 0.9614 
+2025-09-05 20:24:30,591 - MMSA [INFO] - A: >>  Has0_acc_2: 0.5950  Has0_F1_score: 0.4439  Non0_acc_2: 0.5950  Non0_F1_score: 0.4439  Mult_acc_5: 0.3972  Mult_acc_7: 0.3972  MAE: 0.8037  Corr: -0.1568 
+2025-09-05 20:24:30,597 - MMSA [INFO] - V: >>  Has0_acc_2: 0.8466  Has0_F1_score: 0.7762  Non0_acc_2: 0.8466  Non0_F1_score: 0.7762  Mult_acc_5: 0.4540  Mult_acc_7: 0.4540  MAE: 0.7587  Corr: 0.4228 
+2025-09-05 20:24:37,298 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.7052 
+2025-09-05 20:24:37,302 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8253  Has0_F1_score: 0.8259  Non0_acc_2: 0.8565  Non0_F1_score: 0.8559  Mult_acc_5: 0.5284  Mult_acc_7: 0.4192  MAE: 0.7123  Corr: 0.7993 
+2025-09-05 20:24:36,105 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9665  Has0_F1_score: 0.9666  Non0_acc_2: 0.9829  Non0_F1_score: 0.9829  Mult_acc_5: 0.8699  Mult_acc_7: 0.8178  MAE: 0.1713  Corr: 0.9883 
+2025-09-05 20:24:36,109 - MMSA [INFO] - T: >>  Has0_acc_2: 0.9891  Has0_F1_score: 0.9890  Non0_acc_2: 0.9891  Non0_F1_score: 0.9890  Mult_acc_5: 0.7975  Mult_acc_7: 0.7188  MAE: 0.2779  Corr: 0.9671 
+2025-09-05 20:24:36,112 - MMSA [INFO] - A: >>  Has0_acc_2: 0.6036  Has0_F1_score: 0.4544  Non0_acc_2: 0.6036  Non0_F1_score: 0.4544  Mult_acc_5: 0.4112  Mult_acc_7: 0.4112  MAE: 0.8046  Corr: -0.1487 
+2025-09-05 20:24:36,117 - MMSA [INFO] - V: >>  Has0_acc_2: 0.8435  Has0_F1_score: 0.7718  Non0_acc_2: 0.8435  Non0_F1_score: 0.7718  Mult_acc_5: 0.4587  Mult_acc_7: 0.4587  MAE: 0.7549  Corr: 0.4599 
+2025-09-05 20:24:36,728 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.7137 
+2025-09-05 20:24:36,732 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8341  Has0_F1_score: 0.8348  Non0_acc_2: 0.8704  Non0_F1_score: 0.8700  Mult_acc_5: 0.5240  Mult_acc_7: 0.4236  MAE: 0.7154  Corr: 0.7975 
+2025-09-05 20:24:42,047 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9618  Has0_F1_score: 0.9620  Non0_acc_2: 0.9862  Non0_F1_score: 0.9862  Mult_acc_5: 0.8707  Mult_acc_7: 0.8201  MAE: 0.1676  Corr: 0.9893 
+2025-09-05 20:24:42,051 - MMSA [INFO] - T: >>  Has0_acc_2: 0.9836  Has0_F1_score: 0.9835  Non0_acc_2: 0.9836  Non0_F1_score: 0.9835  Mult_acc_5: 0.7905  Mult_acc_7: 0.7134  MAE: 0.2867  Corr: 0.9643 
+2025-09-05 20:24:42,055 - MMSA [INFO] - A: >>  Has0_acc_2: 0.6059  Has0_F1_score: 0.4572  Non0_acc_2: 0.6059  Non0_F1_score: 0.4572  Mult_acc_5: 0.4136  Mult_acc_7: 0.4136  MAE: 0.8033  Corr: -0.1380 
+2025-09-05 20:24:42,060 - MMSA [INFO] - V: >>  Has0_acc_2: 0.8427  Has0_F1_score: 0.7707  Non0_acc_2: 0.8427  Non0_F1_score: 0.7707  Mult_acc_5: 0.4579  Mult_acc_7: 0.4579  MAE: 0.7617  Corr: 0.5194 
+2025-09-05 20:24:42,683 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.7310 
+2025-09-05 20:24:42,686 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8210  Has0_F1_score: 0.8219  Non0_acc_2: 0.8565  Non0_F1_score: 0.8561  Mult_acc_5: 0.5022  Mult_acc_7: 0.3930  MAE: 0.7235  Corr: 0.7967 
+2025-09-05 20:24:47,762 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9626  Has0_F1_score: 0.9627  Non0_acc_2: 0.9805  Non0_F1_score: 0.9805  Mult_acc_5: 0.8614  Mult_acc_7: 0.8069  MAE: 0.1750  Corr: 0.9877 
+2025-09-05 20:24:47,766 - MMSA [INFO] - T: >>  Has0_acc_2: 0.9844  Has0_F1_score: 0.9844  Non0_acc_2: 0.9844  Non0_F1_score: 0.9844  Mult_acc_5: 0.7889  Mult_acc_7: 0.7103  MAE: 0.2652  Corr: 0.9660 
+2025-09-05 20:24:47,770 - MMSA [INFO] - A: >>  Has0_acc_2: 0.6106  Has0_F1_score: 0.4630  Non0_acc_2: 0.6106  Non0_F1_score: 0.4630  Mult_acc_5: 0.4245  Mult_acc_7: 0.4245  MAE: 0.8003  Corr: -0.1302 
+2025-09-05 20:24:47,775 - MMSA [INFO] - V: >>  Has0_acc_2: 0.8411  Has0_F1_score: 0.7685  Non0_acc_2: 0.8411  Non0_F1_score: 0.7685  Mult_acc_5: 0.4525  Mult_acc_7: 0.4525  MAE: 0.7860  Corr: 0.5525 
+2025-09-05 20:24:48,372 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.7206 
+2025-09-05 20:24:48,376 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8166  Has0_F1_score: 0.8178  Non0_acc_2: 0.8519  Non0_F1_score: 0.8519  Mult_acc_5: 0.5240  Mult_acc_7: 0.4148  MAE: 0.7149  Corr: 0.7984 
+2025-09-05 20:24:53,489 - MMSA [INFO] - M: >>  Has0_acc_2: 0.9650  Has0_F1_score: 0.9651  Non0_acc_2: 0.9854  Non0_F1_score: 0.9854  Mult_acc_5: 0.8715  Mult_acc_7: 0.8217  MAE: 0.1663  Corr: 0.9889 
+2025-09-05 20:24:53,493 - MMSA [INFO] - T: >>  Has0_acc_2: 0.9868  Has0_F1_score: 0.9866  Non0_acc_2: 0.9868  Non0_F1_score: 0.9866  Mult_acc_5: 0.7967  Mult_acc_7: 0.7064  MAE: 0.2658  Corr: 0.9701 
+2025-09-05 20:24:53,497 - MMSA [INFO] - A: >>  Has0_acc_2: 0.6176  Has0_F1_score: 0.4716  Non0_acc_2: 0.6176  Non0_F1_score: 0.4716  Mult_acc_5: 0.4315  Mult_acc_7: 0.4315  MAE: 0.7970  Corr: -0.1295 
+2025-09-05 20:24:53,501 - MMSA [INFO] - V: >>  Has0_acc_2: 0.8372  Has0_F1_score: 0.7631  Non0_acc_2: 0.8372  Non0_F1_score: 0.7631  Mult_acc_5: 0.4540  Mult_acc_7: 0.4540  MAE: 0.7962  Corr: 0.5676 
+2025-09-05 20:24:54,126 - MMSA [INFO] - VAL-(tetfn_crt) >> loss: 0.7133 
+2025-09-05 20:24:54,130 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8297  Has0_F1_score: 0.8304  Non0_acc_2: 0.8611  Non0_F1_score: 0.8607  Mult_acc_5: 0.5153  Mult_acc_7: 0.4061  MAE: 0.7135  Corr: 0.8007 
+2025-09-05 20:24:56,805 - MMSA [INFO] - TEST-(tetfn_crt) >> loss: 0.7287 
+2025-09-05 20:24:56,810 - MMSA [INFO] - M: >>  Has0_acc_2: 0.8251  Has0_F1_score: 0.8248  Non0_acc_2: 0.8415  Non0_F1_score: 0.8417  Mult_acc_5: 0.5131  Mult_acc_7: 0.4417  MAE: 0.7320  Corr: 0.7932 
+2025-09-05 20:24:58,049 - MMSA [INFO] - Result for seed 1111: {'Has0_acc_2': 0.8251, 'Has0_F1_score': 0.8248, 'Non0_acc_2': 0.8415, 'Non0_F1_score': 0.8417, 'Mult_acc_5': np.float64(0.5131), 'Mult_acc_7': np.float64(0.4417), 'MAE': np.float64(0.732), 'Corr': np.float64(0.7932), 'Loss': 0.7287}
+2025-09-05 20:24:58,070 - MMSA [INFO] - Results saved to results/normal/mosi.csv.
