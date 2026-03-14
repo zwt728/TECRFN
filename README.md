@@ -178,12 +178,3 @@ If you find this repository useful, please cite the following manuscript:
   author={Wantong Zhao and Yongqing Wu},
   note={Manuscript}
 }
-Contact
-
-Wantong Zhao
-School of Software, Liaoning Technical University, Huludao, China
-Email: 3237887494@qq.com
-
-Acknowledgement
-
-This work was supported by the National Natural Science Foundation of China (Grant No. 52174184).
